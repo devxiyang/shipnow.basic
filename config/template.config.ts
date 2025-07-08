@@ -9,8 +9,8 @@
 export const BRANDING = {
   // Basic brand information
   name: "ShipNow",
-  tagline: "Launch Your SaaS Product Faster", 
-  description: "The ultimate Next.js SaaS template with authentication, payments, and subscriptions. Build and ship your product in days, not months.",
+  tagline: "Simple Independent Website", 
+  description: "A clean Next.js template with internationalization support. Perfect for simple independent websites.",
   
   // Contact & Social
   email: "support@shipnow.pro",
@@ -27,7 +27,7 @@ export const BRANDING = {
 
 // ============= SITE CONFIGURATION =============
 export const SITE_CONFIG = {
-  title: "ShipNow - Launch Your SaaS Product Faster",
+  title: "ShipNow - Simple Independent Website",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://shipnow.pro",
   version: "1.0.0",
 } as const;
