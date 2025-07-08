@@ -66,6 +66,49 @@
     "subtitle": "今日からこのクリーンでモダンなテンプレートを始めましょう。",
     "button": "今すぐ構築を開始"
   },
+  "about": {
+    "badge": "このテンプレートについて",
+    "title": "ShipNow Basicについて",
+    "subtitle": "国際化とシンプルさに焦点を当てたクリーンでモダンなNext.jsテンプレート。",
+    "mission": {
+      "title": "私たちのミッション",
+      "description": "開発者にモダンなウェブサイトを構築するためのクリーンで、シンプルで、パワフルな基盤を提供すること。不要な複雑さなしに、本質的な機能に焦点を当てています。"
+    },
+    "vision": {
+      "title": "私たちのビジョン",
+      "description": "国際化を誰にでもアクセスしやすくすること。多言語ウェブサイトの構築は、複雑な作業ではなく、シンプルで分かりやすいものであるべきです。"
+    },
+    "features": {
+      "title": "私たちの違い",
+      "i18n": {
+        "title": "グローバル展開のために構築",
+        "description": "7言語を最初からサポートする完全な国際化機能。"
+      },
+      "performance": {
+        "title": "パフォーマンス第一",
+        "description": "React Server ComponentsとNext.js App Routerで最適化され、超高速読み込みを実現。"
+      },
+      "design": {
+        "title": "美しいデザイン",
+        "description": "ダークモードサポートとレスポンシブレイアウトを備えたクリーンでモダンなデザイン。"
+      }
+    },
+    "tech": {
+      "title": "モダンテクノロジーで構築",
+      "nextjs": "App RouterとServer Componentsを搭載したプロダクション向けReactフレームワーク。",
+      "react": "並行機能と改善されたパフォーマンスを持つ最新のReact。",
+      "typescript": "完全な型安全性とより良い開発者エクスペリエンス。",
+      "tailwind": "高速UI開発のためのユーティリティファーストCSSフレームワーク。",
+      "nextintl": "Next.jsアプリケーションのための完全な国際化ソリューション。",
+      "shadcn": "Radix UIで構築された美しくアクセシブルなコンポーネント。"
+    },
+    "cta": {
+      "title": "始める準備はできましたか？",
+      "description": "私たちのテンプレートで素晴らしい多言語ウェブサイトを構築している開発者に参加しましょう。",
+      "github": "GitHubで見る",
+      "twitter": "アップデートをフォロー"
+    }
+  },
   "errors": {
     "resourceNotFound": "要求されたリソースが見つかりません。",
     "resourceAlreadyExists": "このリソースは既に存在します。",

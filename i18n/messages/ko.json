@@ -66,6 +66,49 @@
     "subtitle": "오늘부터 이 깔끔하고 현대적인 템플릿을 시작하세요.",
     "button": "지금 구축 시작하기"
   },
+  "about": {
+    "badge": "이 템플릿에 대해",
+    "title": "ShipNow Basic에 대해",
+    "subtitle": "국제화와 단순함에 초점을 맞춘 깔끔하고 현대적인 Next.js 템플릿.",
+    "mission": {
+      "title": "우리의 미션",
+      "description": "개발자들에게 현대적인 웹사이트를 구축하기 위한 깔끔하고 간단하며 강력한 기반을 제공하는 것입니다. 불필요한 복잡성 없이 필수 기능에 집중합니다."
+    },
+    "vision": {
+      "title": "우리의 비전",
+      "description": "국제화를 모든 사람이 접근할 수 있도록 만드는 것입니다. 다국어 웹사이트 구축은 복잡한 작업이 아니라 간단하고 직관적이어야 합니다."
+    },
+    "features": {
+      "title": "우리의 차별점",
+      "i18n": {
+        "title": "글로벌 확장을 위한 구축",
+        "description": "처음부터 7개 언어를 지원하는 완전한 국제화 기능."
+      },
+      "performance": {
+        "title": "성능 우선",
+        "description": "React Server Components와 Next.js App Router로 최적화되어 초고속 로딩을 구현."
+      },
+      "design": {
+        "title": "아름다운 디자인",
+        "description": "다크 모드 지원과 반응형 레이아웃을 갖춘 깔끔하고 현대적인 디자인."
+      }
+    },
+    "tech": {
+      "title": "현대 기술로 구축",
+      "nextjs": "App Router와 Server Components를 갖춘 프로덕션용 React 프레임워크.",
+      "react": "동시성 기능과 개선된 성능을 가진 최신 React.",
+      "typescript": "완전한 타입 안전성과 더 나은 개발자 경험.",
+      "tailwind": "빠른 UI 개발을 위한 유틸리티 우선 CSS 프레임워크.",
+      "nextintl": "Next.js 애플리케이션을 위한 완전한 국제화 솔루션.",
+      "shadcn": "Radix UI로 구축된 아름답고 접근 가능한 컴포넌트."
+    },
+    "cta": {
+      "title": "시작할 준비가 되셨나요?",
+      "description": "우리 템플릿으로 놀라운 다국어 웹사이트를 구축하고 있는 개발자들과 함께하세요.",
+      "github": "GitHub에서 보기",
+      "twitter": "업데이트 팔로우"
+    }
+  },
   "errors": {
     "resourceNotFound": "요청된 리소스를 찾을 수 없습니다.",
     "resourceAlreadyExists": "이 리소스는 이미 존재합니다.",

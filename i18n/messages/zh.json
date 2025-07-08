@@ -66,6 +66,49 @@
     "subtitle": "立即开始使用这个干净、现代的模板。",
     "button": "立即开始构建"
   },
+  "about": {
+    "badge": "关于此模板",
+    "title": "关于 ShipNow Basic",
+    "subtitle": "一个专注于国际化和简洁性的干净、现代的 Next.js 模板。",
+    "mission": {
+      "title": "我们的使命",
+      "description": "为开发者提供一个干净、简单而强大的现代网站构建基础。我们专注于核心功能，没有不必要的复杂性。"
+    },
+    "vision": {
+      "title": "我们的愿景",
+      "description": "让国际化对每个人都变得触手可及。构建多语言网站应该简单直接，而不是复杂的工程。"
+    },
+    "features": {
+      "title": "我们的独特之处",
+      "i18n": {
+        "title": "为全球化而生",
+        "description": "开箱即用的完整国际化支持，内置 7 种语言。"
+      },
+      "performance": {
+        "title": "性能优先",
+        "description": "通过 React 服务器组件和 Next.js App Router 优化，实现闪电般的加载速度。"
+      },
+      "design": {
+        "title": "美观设计",
+        "description": "干净、现代的设计，支持深色模式和响应式布局。"
+      }
+    },
+    "tech": {
+      "title": "基于现代技术构建",
+      "nextjs": "生产级 React 框架，具有 App Router 和服务器组件。",
+      "react": "最新的 React，具有并发特性和改进的性能。",
+      "typescript": "完整的类型安全和更好的开发体验。",
+      "tailwind": "实用程序优先的 CSS 框架，用于快速 UI 开发。",
+      "nextintl": "Next.js 应用程序的完整国际化解决方案。",
+      "shadcn": "基于 Radix UI 构建的美观、易用的组件。"
+    },
+    "cta": {
+      "title": "准备好开始了吗？",
+      "description": "加入正在使用我们的模板构建精彩多语言网站的开发者行列。",
+      "github": "在 GitHub 上查看",
+      "twitter": "关注更新"
+    }
+  },
   "errors": {
     "resourceNotFound": "未找到请求的资源。",
     "resourceAlreadyExists": "此资源已存在。",

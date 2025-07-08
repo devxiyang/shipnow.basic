@@ -100,7 +100,7 @@ export const NAVIGATION = {
     },
     {
       title: "About", 
-      href: "#about",
+      href: "/about",
       description: "Learn more about this template"
     }
   ],
@@ -110,7 +110,7 @@ export const NAVIGATION = {
       title: "Product",
       links: [
         { title: "Features", href: "#features" },
-        { title: "About", href: "#about" }
+        { title: "About", href: "/about" }
       ]
     },
     {

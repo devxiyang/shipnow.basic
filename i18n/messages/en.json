@@ -66,6 +66,49 @@
     "subtitle": "Get started with this clean, modern template today.",
     "button": "Start Building Now"
   },
+  "about": {
+    "badge": "About This Template",
+    "title": "About ShipNow Basic",
+    "subtitle": "A clean, modern Next.js template focused on internationalization and simplicity.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To provide developers with a clean, simple, and powerful foundation for building modern websites. We focus on essential features without unnecessary complexity."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To make internationalization accessible to everyone. Building multilingual websites should be simple and straightforward, not a complex undertaking."
+    },
+    "features": {
+      "title": "What Makes Us Different",
+      "i18n": {
+        "title": "Built for Global Reach",
+        "description": "Complete internationalization support with 7 languages out of the box."
+      },
+      "performance": {
+        "title": "Performance First",
+        "description": "Optimized with React Server Components and Next.js App Router for lightning-fast loading."
+      },
+      "design": {
+        "title": "Beautiful Design",
+        "description": "Clean, modern design with dark mode support and responsive layout."
+      }
+    },
+    "tech": {
+      "title": "Built with Modern Technology",
+      "nextjs": "The React framework for production with App Router and Server Components.",
+      "react": "Latest React with concurrent features and improved performance.",
+      "typescript": "Full type safety and better developer experience.",
+      "tailwind": "Utility-first CSS framework for rapid UI development.",
+      "nextintl": "Complete internationalization solution for Next.js applications.",
+      "shadcn": "Beautiful, accessible components built with Radix UI."
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join developers who are building amazing multilingual websites with our template.",
+      "github": "View on GitHub",
+      "twitter": "Follow Updates"
+    }
+  },
   "errors": {
     "resourceNotFound": "The requested resource was not found.",
     "resourceAlreadyExists": "This resource already exists.",

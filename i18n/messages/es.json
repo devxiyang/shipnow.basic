@@ -66,6 +66,49 @@
     "subtitle": "Comienza con esta plantilla limpia y moderna hoy.",
     "button": "Empezar a Construir Ahora"
   },
+  "about": {
+    "badge": "Acerca de Esta Plantilla",
+    "title": "Acerca de ShipNow Basic",
+    "subtitle": "Una plantilla Next.js limpia y moderna enfocada en la internacionalización y simplicidad.",
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Proporcionar a los desarrolladores una base limpia, simple y poderosa para construir sitios web modernos. Nos enfocamos en características esenciales sin complejidad innecesaria."
+    },
+    "vision": {
+      "title": "Nuestra Visión",
+      "description": "Hacer que la internacionalización sea accesible para todos. Construir sitios web multilingües debería ser simple y directo, no una tarea compleja."
+    },
+    "features": {
+      "title": "Lo Que Nos Hace Diferentes",
+      "i18n": {
+        "title": "Construido para Alcance Global",
+        "description": "Soporte completo de internacionalización con 7 idiomas desde el principio."
+      },
+      "performance": {
+        "title": "Rendimiento Primero",
+        "description": "Optimizado con React Server Components y Next.js App Router para carga ultra rápida."
+      },
+      "design": {
+        "title": "Diseño Hermoso",
+        "description": "Diseño limpio y moderno con soporte de modo oscuro y diseño responsivo."
+      }
+    },
+    "tech": {
+      "title": "Construido con Tecnología Moderna",
+      "nextjs": "El framework React para producción con App Router y Server Components.",
+      "react": "React más reciente con características concurrentes y rendimiento mejorado.",
+      "typescript": "Seguridad completa de tipos y mejor experiencia del desarrollador.",
+      "tailwind": "Framework CSS utility-first para desarrollo rápido de UI.",
+      "nextintl": "Solución completa de internacionalización para aplicaciones Next.js.",
+      "shadcn": "Componentes hermosos y accesibles construidos con Radix UI."
+    },
+    "cta": {
+      "title": "¿Listo para Comenzar?",
+      "description": "Únete a los desarrolladores que están construyendo sitios web multilingües increíbles con nuestra plantilla.",
+      "github": "Ver en GitHub",
+      "twitter": "Seguir Actualizaciones"
+    }
+  },
   "errors": {
     "resourceNotFound": "El recurso solicitado no fue encontrado.",
     "resourceAlreadyExists": "Este recurso ya existe.",

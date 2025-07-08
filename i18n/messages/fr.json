@@ -66,6 +66,49 @@
     "subtitle": "Commencez avec ce template propre et moderne aujourd'hui.",
     "button": "Commencer à Construire Maintenant"
   },
+  "about": {
+    "badge": "À Propos de Ce Template",
+    "title": "À Propos de ShipNow Basic",
+    "subtitle": "Un template Next.js propre et moderne axé sur l'internationalisation et la simplicité.",
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Fournir aux développeurs une base propre, simple et puissante pour construire des sites web modernes. Nous nous concentrons sur les fonctionnalités essentielles sans complexité inutile."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Rendre l'internationalisation accessible à tous. Construire des sites web multilingues devrait être simple et direct, pas une tâche complexe."
+    },
+    "features": {
+      "title": "Ce Qui Nous Rend Différents",
+      "i18n": {
+        "title": "Conçu pour une Portée Mondiale",
+        "description": "Support complet d'internationalisation avec 7 langues dès le départ."
+      },
+      "performance": {
+        "title": "Performance en Premier",
+        "description": "Optimisé avec React Server Components et Next.js App Router pour un chargement ultra-rapide."
+      },
+      "design": {
+        "title": "Design Magnifique",
+        "description": "Design propre et moderne avec support du mode sombre et mise en page responsive."
+      }
+    },
+    "tech": {
+      "title": "Construit avec une Technologie Moderne",
+      "nextjs": "Le framework React pour la production avec App Router et Server Components.",
+      "react": "React le plus récent avec des fonctionnalités concurrentes et des performances améliorées.",
+      "typescript": "Sécurité complète des types et meilleure expérience développeur.",
+      "tailwind": "Framework CSS utility-first pour un développement UI rapide.",
+      "nextintl": "Solution complète d'internationalisation pour les applications Next.js.",
+      "shadcn": "Composants beaux et accessibles construits avec Radix UI."
+    },
+    "cta": {
+      "title": "Prêt à Commencer ?",
+      "description": "Rejoignez les développeurs qui construisent des sites web multilingues incroyables avec notre template.",
+      "github": "Voir sur GitHub",
+      "twitter": "Suivre les Mises à Jour"
+    }
+  },
   "errors": {
     "resourceNotFound": "La ressource demandée n'a pas été trouvée.",
     "resourceAlreadyExists": "Cette ressource existe déjà.",

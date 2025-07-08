@@ -66,6 +66,49 @@
     "subtitle": "Beginnen Sie noch heute mit diesem sauberen, modernen Template.",
     "button": "Jetzt mit dem Erstellen beginnen"
   },
+  "about": {
+    "badge": "Über Diese Vorlage",
+    "title": "Über ShipNow Basic",
+    "subtitle": "Eine saubere, moderne Next.js-Vorlage mit Fokus auf Internationalisierung und Einfachheit.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Entwicklern eine saubere, einfache und leistungsstarke Grundlage für den Bau moderner Websites zu bieten. Wir konzentrieren uns auf wesentliche Funktionen ohne unnötige Komplexität."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Internationalisierung für alle zugänglich zu machen. Der Bau mehrsprachiger Websites sollte einfach und unkompliziert sein, nicht eine komplexe Aufgabe."
+    },
+    "features": {
+      "title": "Was Uns Unterscheidet",
+      "i18n": {
+        "title": "Für Globale Reichweite Entwickelt",
+        "description": "Vollständige Internationalisierungsunterstützung mit 7 Sprachen von Anfang an."
+      },
+      "performance": {
+        "title": "Performance Zuerst",
+        "description": "Optimiert mit React Server Components und Next.js App Router für blitzschnelles Laden."
+      },
+      "design": {
+        "title": "Schönes Design",
+        "description": "Sauberes, modernes Design mit Unterstützung für dunklen Modus und responsivem Layout."
+      }
+    },
+    "tech": {
+      "title": "Mit Moderner Technologie Gebaut",
+      "nextjs": "Das React-Framework für die Produktion mit App Router und Server Components.",
+      "react": "Neuestes React mit gleichzeitigen Funktionen und verbesserter Performance.",
+      "typescript": "Vollständige Typsicherheit und bessere Entwicklererfahrung.",
+      "tailwind": "Utility-first CSS-Framework für schnelle UI-Entwicklung.",
+      "nextintl": "Vollständige Internationalisierungslösung für Next.js-Anwendungen.",
+      "shadcn": "Schöne, barrierefreie Komponenten, die mit Radix UI gebaut wurden."
+    },
+    "cta": {
+      "title": "Bereit Loszulegen?",
+      "description": "Schließen Sie sich Entwicklern an, die erstaunliche mehrsprachige Websites mit unserer Vorlage bauen.",
+      "github": "Auf GitHub anzeigen",
+      "twitter": "Updates folgen"
+    }
+  },
   "errors": {
     "resourceNotFound": "Die angeforderte Ressource wurde nicht gefunden.",
     "resourceAlreadyExists": "Diese Ressource existiert bereits.",
