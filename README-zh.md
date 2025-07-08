@@ -12,31 +12,25 @@
 
 ## 🎯 快速模板设置
 
-**初次使用此模板？** 使用我们的交互式设置向导：
+**初次使用此模板？** 简单自定义配置文件：
 
-```bash
-npm run init-template
-```
+1. **品牌配置**: 更新 `config/template.config.ts` 中的品牌信息
+2. **网站设置**: 修改 `config/site.config.ts` 中的元数据
+3. **内容自定义**: 自定义英雄区域、功能和 CTA 部分
+4. **翻译文件**: 更新 `i18n/messages/` 中的翻译文件
 
-这将指导您自定义：
-- 品牌名称、标语和描述
-- 英雄区域内容  
-- 功能描述
-- 网站配置
-- 基础环境变量
-
-所有更改都应用到 `config/template.config.ts` 以便于自定义。
+所有模板内容都集中在配置文件中，便于自定义。
 
 ## 🚀 功能特性
 
 - **🌍 国际化**: 完整的i18n支持，支持7种语言 (next-intl)
-- **UI 组件**: shadcn/ui 支持暗黑模式
-- **类型安全**: 完整的 TypeScript 支持
-- **响应式**: 移动优先设计
-- **SEO 就绪**: 优化的元数据和站点地图
-- **现代技术栈**: Next.js 15, React 19, Tailwind CSS v4
-- **快速开发**: 热重载和 TypeScript 支持
-- **清晰架构**: 组织良好的项目结构
+- **🎨 UI 组件**: shadcn/ui 支持暗黑模式
+- **📱 响应式**: 移动优先设计，使用 Tailwind CSS v4
+- **⚡ 性能优化**: 服务器组件和 App Router 实现最优速度
+- **🔒 类型安全**: 完整的 TypeScript 支持
+- **🎯 SEO 就绪**: 优化的元数据和站点地图
+- **🛠️ 开发体验**: 使用 Turbopack 的热重载
+- **🏗️ 清晰架构**: 组织良好的项目结构
 
 ## 🛠️ 技术栈
 
@@ -73,8 +67,8 @@ cp .env.example .env.local
 
 4. 在 `.env.local` 中配置环境变量（可选）：
 ```bash
-# 站点 URL
-NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+# 生产环境的站点 URL
+NEXT_PUBLIC_SITE_URL="https://yourdomain.com"
 
 # 分析（可选）
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
@@ -91,11 +85,11 @@ npm run dev
 
 ### 基础命令
 ```bash
-npm run dev          # 启动开发服务器 (http://localhost:3000)
+npm run dev          # 使用 Turbopack 启动开发服务器
+npm run dev:https    # 使用 HTTPS 启动开发服务器
 npm run build        # 构建生产版本
 npm run start        # 启动生产服务器
 npm run lint         # 运行 ESLint
-npm run type-check   # 检查 TypeScript 类型
 ```
 
 ### 模板自定义
@@ -132,16 +126,24 @@ export const CONTENT = {
 shipnow.basic/
 ├── app/                  # Next.js App Router 页面
 │   ├── [locale]/        # 国际化路由
-│   ├── api/             # API 路由（最小化）
-│   └── globals.css      # 全局样式
+│   │   ├── page.tsx     # 主页
+│   │   ├── layout.tsx   # 特定语言布局
+│   │   ├── privacy-policy/
+│   │   └── terms-of-service/
+│   ├── globals.css      # 全局样式
+│   ├── layout.tsx       # 根布局
+│   └── page.tsx         # 根页面重定向
 ├── components/          # React 组件
 │   ├── ui/             # shadcn/ui 组件
-│   └── layout/         # 布局组件
+│   ├── Footer.tsx      # 页脚组件
+│   ├── Header.tsx      # 页头组件
+│   └── theme-provider.tsx # 主题提供者
 ├── config/             # 配置文件
 │   ├── site.config.ts  # 站点元数据
 │   └── template.config.ts # 模板配置
 ├── i18n/               # 国际化
-│   ├── config.ts       # i18n 配置
+│   ├── routing.ts      # i18n 路由配置
+│   ├── request.ts      # 请求配置
 │   └── messages/       # 翻译文件
 │       ├── en.json     # 英语
 │       ├── zh.json     # 中文
@@ -151,7 +153,6 @@ shipnow.basic/
 │       ├── ja.json     # 日语
 │       └── ko.json     # 韩语
 ├── lib/                # 工具和辅助函数
-│   ├── hooks/          # 自定义 React hooks
 │   ├── utils/          # 工具函数
 │   └── types/          # TypeScript 类型
 └── middleware.ts       # Next.js 中间件
@@ -209,12 +210,16 @@ export const CONTENT = {
 
 **添加新语言：**
 1. 在 `/i18n/messages/[locale].json` 中创建翻译文件
-2. 将区域设置添加到 `/i18n/config.ts`：
+2. 将区域设置添加到 `/i18n/routing.ts`：
 ```typescript
-export const locales = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'your-locale'] as const;
+export const routing = defineRouting({
+  locales: ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'your-locale'],
+  defaultLocale: 'en',
+  localePrefix: 'always'
+});
 ```
-3. 更新 `middleware.ts` 中的中间件模式
-4. 将区域设置名称添加到语言切换器
+3. 中间件将自动处理新的区域设置
+4. 将区域设置名称添加到语言切换器组件
 
 **翻译键：**
 所有翻译按部分组织：
@@ -237,46 +242,20 @@ function MyComponent() {
 }
 ```
 
-### 数据库模式
-
-模板包含这些核心模型：
-- `Order` - 支付交易
-- `Subscription` - 用户订阅
-- `PaymentEvent` - Webhook 事件
-
-### 订阅计划
-
-在 `config/template.config.ts` 中自定义计划：
-```typescript
-export const SUBSCRIPTION_PLANS = {
-  STANDARD: {
-    name: "入门版", 
-    price: 9.99,
-    features: ["功能 1", "功能 2"]
-  }
-};
-```
-
-### 身份验证
-
-默认配置 Google 一键登录。要添加更多提供商：
-1. 在 Supabase 中配置提供商
-2. 更新 `/components/auth/` 中的身份验证组件
 
 ## 📖 使用指南
 
-### 自定义您的 SaaS
+### 自定义您的网站
 
 #### 1. 更新站点配置
 ```typescript
 // config/site.config.ts
 export const siteConfig = {
-  name: "您的SaaS",
-  title: "您的 SaaS 标题",
-  description: "您的 SaaS 描述",
-  url: "https://yoursaas.com",
-  email: "support@yoursaas.com",
-  twitter: "@yoursaas"
+  name: "您的网站",
+  title: "您的网站标题",
+  description: "您的网站描述",
+  url: "https://yoursite.com",
+  twitter: "devxiyang"
 }
 ```
 
@@ -344,11 +323,11 @@ function MyComponent() {
 
 ```bash
 # 开发
-npm run dev              # 启动开发服务器
+npm run dev              # 使用 Turbopack 启动开发服务器
+npm run dev:https        # 使用 HTTPS 启动开发服务器
 npm run build            # 构建生产版本
 npm run start            # 启动生产服务器
 npm run lint             # 运行 ESLint
-npm run type-check       # 检查 TypeScript
 ```
 
 ### 部署检查清单
@@ -362,8 +341,10 @@ npm run type-check       # 检查 TypeScript
 
 #### 生产环境变量：
 ```bash
-# 为生产环境更新
+# 生产环境必需
 NEXT_PUBLIC_SITE_URL="https://yourdomain.com"
+
+# 可选分析
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 ```
 
@@ -371,39 +352,35 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 
 ### 常见问题
 
-#### 身份验证不工作
-1. 检查 Google 客户端 ID 是否正确
-2. 验证 Google Console 中的重定向 URL 是否匹配您的域名
-3. 确保 Supabase 项目 URL 和密钥正确
-
-#### 支付失败
-1. 验证 Stripe 密钥（测试 vs 生产）
-2. 检查 webhook 端点是否接收事件
-3. 确认产品 ID 与您的 Stripe 仪表板匹配
-
 #### 构建错误
 1. 运行 `npm run lint` 检查代码问题
 2. 确保所有环境变量已设置
 3. 使用 `npm run type-check` 检查 TypeScript 错误
 
-#### 数据库连接问题
-1. 验证 DATABASE_URL 格式
-2. 检查数据库服务器是否可访问
-3. 运行 `make generate` 确保 Prisma 客户端是最新的
+#### 翻译问题
+1. 验证翻译文件存在于 `/i18n/messages/`
+2. 检查 `/i18n/routing.ts` 中的区域设置配置
+3. 确保翻译键在文件之间匹配
+4. 验证 `middleware.ts` 中的中间件配置
+
+#### 路由问题
+1. 检查 `middleware.ts` 中的中间件配置
+2. 验证页面中的区域设置参数处理
+3. 确保国际化路由的正确 URL 结构
 
 ### 性能提示
 
 1. **图片优化**: 使用 Next.js Image 组件
 2. **包分析**: 运行 `npm run build` 并检查包大小
-3. **数据库查询**: 使用 Prisma 查询优化
-4. **缓存**: 配置适当的缓存头
+3. **缓存**: 配置适当的缓存头
+4. **代码分割**: 为大型组件使用动态导入
 
 ### 安全最佳实践
 
 1. **环境变量**: 永远不要将 `.env.local` 提交到版本控制
-2. **API 密钥**: 为开发和生产使用不同的密钥
-3. **CORS**: 配置适当的 CORS 策略
-4. **速率限制**: 为 API 路由实施速率限制
+2. **CORS**: 必要时配置适当的 CORS 策略
+3. **内容安全策略**: 实施 CSP 头
+4. **输入验证**: 验证所有用户输入
 
 ## ❓ 常见问题
 
@@ -415,44 +392,31 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 **问：如何自定义品牌？**
 答：更新 `config/site.config.ts` 和 `config/template.config.ts` 中的配置。所有品牌元素都集中在那里。
 
-**问：我可以添加更多付费计划吗？**
-答：可以！在 Stripe 中创建额外的产品，然后更新 `config/template.config.ts` 中的定价配置。
+**问：这个模板和其他 Next.js 模板有什么不同？**
+答：这个模板专注于国际化和简洁架构。它是一个简化版本，没有身份验证或支付功能，非常适合营销网站和简单应用程序。
 
 ### 国际化
 
 **问：如何更改默认语言？**
-答：在 `i18n/config.ts` 中将 `defaultLocale` 更新为您的首选语言。
+答：在 `i18n/routing.ts` 中将 `defaultLocale` 更新为您的首选语言。
 
 **问：我可以删除不需要的语言吗？**
-答：可以！从 `i18n/config.ts` 中的 `locales` 数组中删除区域设置，并删除相应的翻译文件。
+答：可以！从 `i18n/routing.ts` 中的 `locales` 数组中删除区域设置，并删除相应的翻译文件。
 
 **问：如何处理 RTL 语言？**
-答：您需要通过基于区域设置配置 CSS 方向来添加 RTL 支持。考虑使用带有 RTL 检测的 `next-intl` 库。
+答：您需要通过基于区域设置配置 CSS 方向来添加 RTL 支持。模板使用的 Tailwind CSS v4 内置了 RTL 支持。
 
 ### 技术问题
-
-**问：我可以使用不同的数据库吗？**
-答：可以！Prisma 支持多个数据库。在 `prisma/schema.prisma` 中更新 `provider` 和您的 `DATABASE_URL`。
-
-**问：如何添加更多身份验证提供商？**
-答：在 Supabase 中配置额外的提供商（GitHub、Discord 等）并更新身份验证组件。
 
 **问：我可以部署到 Vercel 以外的平台吗？**
 答：可以！模板适用于任何支持 Next.js 的平台（Railway、Render、AWS 等）。
 
-**问：如何处理文件上传？**
-答：与 Supabase Storage 或其他提供商（如 AWS S3、Cloudinary 或 UploadThing）集成。
+**问：如何添加数据库？**
+答：您可以添加任何数据库解决方案。考虑使用 Prisma 和 PostgreSQL、SQLite 或您选择的任何其他数据库。模板与数据库无关。
 
-### 订阅和支付
+**问：我可以添加身份验证吗？**
+答：可以！您可以集成任何身份验证提供商，如 Auth.js、Supabase Auth、Clerk 或 Firebase Auth。模板与身份验证无关。
 
-**问：如何处理免费试用？**
-答：在您的 Stripe 产品中设置试用期。webhook 处理程序将自动管理试用状态。
-
-**问：我可以使用一次性支付而不是订阅吗？**
-答：可以！在 Stripe 中创建一次性支付产品并更新结账逻辑。
-
-**问：如何处理订阅取消？**
-答：取消通过 Stripe webhooks 自动处理。用户在期间结束前保留访问权限。
 
 ### 开发
 
@@ -462,8 +426,8 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 **问：我可以使用不同的 UI 库吗？**
 答：可以！虽然模板使用 shadcn/ui，但您可以用任何 React 组件库替换它。
 
-**问：如何处理 API 速率限制？**
-答：使用 `@upstash/ratelimit` 或自定义中间件等库在您的 API 路由中实施速率限制。
+**问：如何添加 API 路由？**
+答：在 `app/api/` 目录中创建文件。这些路由将无论区域设置如何都可用。
 
 ## 🚢 部署
 
@@ -471,7 +435,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 
 1. 将您的代码推送到 GitHub
 2. 在 Vercel 中导入项目
-3. 添加环境变量
+3. 添加环境变量（可选）
 4. 部署
 
 ### 其他平台
@@ -481,15 +445,14 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 - Render
 - Fly.io
 - AWS Amplify
+- Netlify
 
 ## 📚 文档
 
 - [Next.js 文档](https://nextjs.org/docs)
-- [Supabase 文档](https://supabase.com/docs)
-- [Stripe 文档](https://stripe.com/docs)
-- [Prisma 文档](https://www.prisma.io/docs)
 - [shadcn/ui 文档](https://ui.shadcn.com)
 - [next-intl 文档](https://next-intl.dev)
+- [Tailwind CSS 文档](https://tailwindcss.com/docs)
 
 ## 🤝 贡献
 
@@ -503,9 +466,9 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 
 - [shadcn/ui](https://ui.shadcn.com) 提供美丽的组件
 - [Vercel](https://vercel.com) 提供出色的部署平台
-- [Supabase](https://supabase.com) 提供身份验证和数据库
-- [Stripe](https://stripe.com) 提供支付处理
+- [next-intl](https://next-intl.dev) 提供国际化支持
+- [Tailwind CSS](https://tailwindcss.com) 提供样式系统
 
 ---
 
-由 ShipNow 团队用 ❤️ 构建
+由 [devxiyang](https://twitter.com/devxiyang) 用 ❤️ 构建

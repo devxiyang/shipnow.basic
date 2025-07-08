@@ -14,31 +14,25 @@ A clean and modern Next.js website template with built-in internationalization. 
 
 ## 🎯 Quick Template Setup
 
-**New to this template?** Use our interactive setup wizard:
+**New to this template?** Simply customize the configuration files:
 
-```bash
-npm run init-template
-```
+1. **Brand Configuration**: Update `config/template.config.ts` with your branding
+2. **Site Settings**: Modify `config/site.config.ts` for metadata
+3. **Content**: Customize hero, features, and CTA sections
+4. **Translations**: Update translation files in `i18n/messages/`
 
-This will guide you through customizing:
-- Brand name, tagline, and description
-- Hero section content  
-- Feature descriptions
-- Site configuration
-- Basic environment variables
-
-All changes are applied to `config/template.config.ts` for easy customization.
+All template content is centralized in configuration files for easy customization.
 
 ## 🚀 Features
 
 - **🌍 Internationalization**: Complete i18n with 7 languages (next-intl)
-- **UI Components**: shadcn/ui with dark mode support
-- **Type Safety**: Full TypeScript support
-- **Responsive**: Mobile-first design
-- **SEO Ready**: Optimized metadata and sitemap
-- **Modern Stack**: Next.js 15, React 19, Tailwind CSS v4
-- **Fast Development**: Hot reload and TypeScript support
-- **Clean Architecture**: Well-organized project structure
+- **🎨 UI Components**: shadcn/ui with dark mode support
+- **📱 Responsive**: Mobile-first design with Tailwind CSS v4
+- **⚡ Performance**: Server Components and App Router for optimal speed
+- **🔒 Type Safety**: Full TypeScript support
+- **🎯 SEO Ready**: Optimized metadata and sitemap
+- **🛠️ Developer Experience**: Hot reload with Turbopack
+- **🏗️ Clean Architecture**: Well-organized project structure
 
 ## 🛠️ Tech Stack
 
@@ -75,8 +69,8 @@ cp .env.example .env.local
 
 4. Configure your environment variables in `.env.local` (optional):
 ```bash
-# Site URL
-NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+# Site URL for production
+NEXT_PUBLIC_SITE_URL="https://yourdomain.com"
 
 # Analytics (optional)
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
@@ -93,11 +87,11 @@ Open [http://localhost:3000](http://localhost:3000) to see your app.
 
 ### Essential Commands
 ```bash
-npm run dev          # Start development server (http://localhost:3000)
+npm run dev          # Start development server with Turbopack
+npm run dev:https    # Start development server with HTTPS
 npm run build        # Build for production
 npm run start        # Start production server
 npm run lint         # Run ESLint
-npm run type-check   # Check TypeScript types
 ```
 
 ### Template Customization
@@ -134,16 +128,24 @@ export const CONTENT = {
 shipnow.basic/
 ├── app/                  # Next.js App Router pages
 │   ├── [locale]/        # Internationalized routes
-│   ├── api/             # API routes (minimal)
-│   └── globals.css      # Global styles
+│   │   ├── page.tsx     # Homepage
+│   │   ├── layout.tsx   # Locale-specific layout
+│   │   ├── privacy-policy/
+│   │   └── terms-of-service/
+│   ├── globals.css      # Global styles
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Root page redirect
 ├── components/          # React components
 │   ├── ui/             # shadcn/ui components
-│   └── layout/         # Layout components
+│   ├── Footer.tsx      # Footer component
+│   ├── Header.tsx      # Header component
+│   └── theme-provider.tsx # Theme provider
 ├── config/             # Configuration files
 │   ├── site.config.ts  # Site metadata
 │   └── template.config.ts # Template configuration
 ├── i18n/               # Internationalization
-│   ├── config.ts       # i18n configuration
+│   ├── routing.ts      # i18n routing configuration
+│   ├── request.ts      # Request configuration
 │   └── messages/       # Translation files
 │       ├── en.json     # English
 │       ├── zh.json     # Chinese
@@ -153,7 +155,6 @@ shipnow.basic/
 │       ├── ja.json     # Japanese
 │       └── ko.json     # Korean
 ├── lib/                # Utilities and helpers
-│   ├── hooks/          # Custom React hooks
 │   ├── utils/          # Utility functions
 │   └── types/          # TypeScript types
 └── middleware.ts       # Next.js middleware
@@ -211,12 +212,16 @@ The template supports 7 languages out of the box:
 
 **Adding a New Language:**
 1. Create a translation file in `/i18n/messages/[locale].json`
-2. Add the locale to `/i18n/config.ts`:
+2. Add the locale to `/i18n/routing.ts`:
 ```typescript
-export const locales = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'your-locale'] as const;
+export const routing = defineRouting({
+  locales: ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'your-locale'],
+  defaultLocale: 'en',
+  localePrefix: 'always'
+});
 ```
-3. Update the middleware pattern in `middleware.ts`
-4. Add the locale name to the language switcher
+3. The middleware will automatically handle the new locale
+4. Add the locale name to the language switcher component
 
 **Translation Keys:**
 All translations are organized by sections:
@@ -325,11 +330,11 @@ function MyComponent() {
 
 ```bash
 # Development
-npm run dev              # Start dev server
+npm run dev              # Start dev server with Turbopack
+npm run dev:https        # Start dev server with HTTPS
 npm run build            # Build for production
 npm run start            # Start production server
 npm run lint             # Run ESLint
-npm run type-check       # Check TypeScript
 ```
 
 ### Deployment Checklist
@@ -343,8 +348,10 @@ npm run type-check       # Check TypeScript
 
 #### Production Environment Variables:
 ```bash
-# Update for production
+# Required for production
 NEXT_PUBLIC_SITE_URL="https://yourdomain.com"
+
+# Optional analytics
 NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 ```
 
@@ -359,8 +366,9 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 
 #### Translation Issues
 1. Verify translation files exist in `/i18n/messages/`
-2. Check locale configuration in `/i18n/config.ts`
+2. Check locale configuration in `/i18n/routing.ts`
 3. Ensure translation keys match between files
+4. Verify middleware configuration in `middleware.ts`
 
 #### Routing Issues
 1. Check middleware configuration in `middleware.ts`
@@ -397,13 +405,13 @@ A: This template focuses on internationalization and clean architecture. It's a 
 ### Internationalization
 
 **Q: How do I change the default language?**
-A: Update `defaultLocale` in `i18n/config.ts` to your preferred language.
+A: Update `defaultLocale` in `i18n/routing.ts` to your preferred language.
 
 **Q: Can I remove languages I don't need?**
-A: Yes! Remove the locale from the `locales` array in `i18n/config.ts` and delete the corresponding translation file.
+A: Yes! Remove the locale from the `locales` array in `i18n/routing.ts` and delete the corresponding translation file.
 
 **Q: How do I handle RTL languages?**
-A: You'll need to add RTL support by configuring CSS direction based on locale. Consider using Tailwind CSS RTL support.
+A: You'll need to add RTL support by configuring CSS direction based on locale. The template uses Tailwind CSS v4 which has built-in RTL support.
 
 ### Technical
 
@@ -411,10 +419,10 @@ A: You'll need to add RTL support by configuring CSS direction based on locale. 
 A: Yes! The template works with any platform supporting Next.js (Railway, Render, AWS, etc.).
 
 **Q: How do I add a database?**
-A: You can add any database solution. Consider using Prisma with PostgreSQL, SQLite, or any other database of your choice.
+A: You can add any database solution. Consider using Prisma with PostgreSQL, SQLite, or any other database of your choice. The template is database-agnostic.
 
 **Q: Can I add authentication?**
-A: Yes! You can integrate any authentication provider like Auth.js, Supabase Auth, or Firebase Auth.
+A: Yes! You can integrate any authentication provider like Auth.js, Supabase Auth, Clerk, or Firebase Auth. The template is authentication-agnostic.
 
 ### Development
 

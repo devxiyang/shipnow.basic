@@ -1,7 +1,7 @@
 /**
- * SaaS Template Configuration
+ * Website Template Configuration
  * 
- * This file contains all customizable settings for the SaaS template.
+ * This file contains all customizable settings for the website template.
  * Modify these values to quickly adapt the template for different projects.
  */
 
