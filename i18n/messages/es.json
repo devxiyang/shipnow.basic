@@ -1,0 +1,137 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "save": "Guardar",
+    "continue": "Continuar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "close": "Cerrar"
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signOut": "Cerrar Sesión",
+    "logIn": "Iniciar Sesión",
+    "logOut": "Cerrar Sesión",
+    "signInTitle": "Inicia sesión para continuar",
+    "signInSubtitle": "Usa tu cuenta de Google",
+    "continueWithGoogle": "Continuar con Google",
+    "signingIn": "Iniciando sesión...",
+    "loginSuccessful": "Inicio de sesión exitoso",
+    "loginFailed": "Error al iniciar sesión, inténtalo de nuevo",
+    "profile": "Perfil",
+    "termsPrivacy": "Al continuar, aceptas nuestros Términos y Política de Privacidad"
+  },
+  "navigation": {
+    "features": "Características",
+    "pricing": "Precios",
+    "about": "Acerca de",
+    "help": "Ayuda",
+    "contact": "Contacto",
+    "status": "Estado",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "cookies": "Cookies"
+  },
+  "footer": {
+    "resources": "Recursos",
+    "documentation": "Documentación",
+    "apiReference": "Referencia API",
+    "examples": "Ejemplos",
+    "blog": "Blog",
+    "company": "Empresa",
+    "careers": "Carreras",
+    "partners": "Socios",
+    "legal": "Legal",
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfService": "Términos de Servicio",
+    "cookiePolicy": "Política de Cookies",
+    "security": "Seguridad",
+    "copyright": "Todos los derechos reservados."
+  },
+  "hero": {
+    "badge": "🚀 Lanza más rápido con ShipNow",
+    "headline": "Construye tu SaaS",
+    "highlightedText": " en días",
+    "subtitle": "La plantilla completa de Next.js con todo lo que necesitas para lanzar tu SaaS. Autenticación, pagos y suscripciones incluidas.",
+    "primaryCTA": "Comenzar",
+    "secondaryCTA": "Ver Características"
+  },
+  "features": {
+    "title": "Todo lo que necesitas para lanzar rápido",
+    "subtitle": "Deja de construir autenticación y pagos desde cero. Enfócate en tu producto.",
+    "auth": {
+      "title": "Autenticación",
+      "description": "Sistema completo de autenticación con Google OAuth, gestión de usuarios y seguridad."
+    },
+    "payments": {
+      "title": "Pagos",
+      "description": "Integración con Stripe con suscripciones, pagos únicos y portal de cliente."
+    },
+    "ui": {
+      "title": "UI Moderna",
+      "description": "Componentes hermosos construidos con shadcn/ui y Tailwind CSS."
+    },
+    "performance": {
+      "title": "Rendimiento",
+      "description": "Construido en Next.js 15 con optimizaciones y mejores prácticas."
+    }
+  },
+  "pricing": {
+    "title": "Precios simples y transparentes",
+    "subtitle": "Elige el plan que mejor funcione para ti",
+    "standard": {
+      "name": "Estándar",
+      "description": "Perfecto para empezar",
+      "features": [
+        "Hasta 10 proyectos",
+        "Análisis básicos",
+        "Soporte por email",
+        "Características estándar"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "Para empresas en crecimiento",
+      "features": [
+        "Proyectos ilimitados",
+        "Análisis avanzados",
+        "Soporte prioritario",
+        "Todas las características"
+      ],
+      "popular": "Más Popular"
+    }
+  },
+  "cta": {
+    "title": "¿Listo para empezar a construir?",
+    "subtitle": "Únete a miles de desarrolladores que han lanzado más rápido con ShipNow.",
+    "button": "Comenzar Hoy"
+  },
+  "subscription": {
+    "upgrade": "Actualizar",
+    "manage": "Gestionar Suscripción",
+    "usageLimit": "Límite de Uso Alcanzado",
+    "usageLimitMessage": "Has alcanzado tu límite de uso. Actualiza para continuar usando esta característica.",
+    "currentPlan": "Plan Actual",
+    "renewsOn": "Se renueva el",
+    "canceledOn": "Cancelado el"
+  },
+  "errors": {
+    "userNotAuthenticated": "Por favor, inicia sesión para continuar.",
+    "invalidCredentials": "Email o contraseña inválidos.",
+    "sessionExpired": "Tu sesión ha expirado. Por favor, inicia sesión de nuevo.",
+    "subscriptionRequired": "Esta característica requiere una suscripción.",
+    "usageLimitExceeded": "Has alcanzado tu límite de uso. Por favor, actualiza tu plan.",
+    "insufficientPermissions": "No tienes permisos para realizar esta acción.",
+    "resourceNotFound": "El recurso solicitado no fue encontrado.",
+    "resourceAlreadyExists": "Este recurso ya existe.",
+    "invalidInput": "Por favor, verifica tu entrada e inténtalo de nuevo.",
+    "missingRequiredField": "Por favor, completa todos los campos requeridos.",
+    "networkError": "Error de red. Por favor, verifica tu conexión.",
+    "serverError": "Algo salió mal. Por favor, inténtalo más tarde.",
+    "databaseError": "Error de base de datos. Por favor, inténtalo más tarde.",
+    "externalServiceError": "Error de servicio externo. Por favor, inténtalo más tarde."
+  }
+}

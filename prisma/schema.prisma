@@ -1,0 +1,177 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// Removed Twitter-specific models (Thread, ThreadSummary, ThreadFavorite)
+// Add your own domain-specific models here
+
+// 订单表 - 记录所有支付交易
+model Order {
+  id              String          @id @default(uuid())
+  userId          String          // 用户ID
+  
+  // 交易信息
+  amount          Float           // 金额（美元）
+  currency        Currency        @default(USD)
+  status          OrderStatus     @default(PENDING)
+  
+  // 商品信息
+  productType     ProductType     // 产品类型：ONE_TIME | SUBSCRIPTION
+  planType        PlanType?       // 计划类型：STANDARD | PRO
+  planInterval    PlanInterval?   // 计划周期：MONTHLY | ANNUALLY
+  
+  // 支付平台信息
+  platform        PaymentPlatform // 支付平台
+  platformOrderId String?         // 平台订单ID（如Stripe的payment_intent_id）
+  platformCustomerId String?      // 平台客户ID
+  sessionId       String?         // 支付会话ID
+  priceId         String          // 商品价格ID
+  
+  // 元数据和时间（统一使用UTC）
+  metadata        Json?           // 支付元数据
+  createdAt       DateTime        @default(now()) @db.Timestamptz // UTC时间
+  updatedAt       DateTime?       @updatedAt @db.Timestamptz // UTC时间
+  completedAt     DateTime?       @db.Timestamptz // 支付完成时间 UTC
+  refundedAt      DateTime?       @db.Timestamptz // 退款时间 UTC
+
+  // 注释：与Subscription表有逻辑关联关系（一对一），但无外键约束
+
+  // 索引优化
+  @@unique([platform, sessionId])  // 平台会话唯一性
+  @@index([userId])                // 查询用户订单
+  @@index([createdAt])             // 订单时间排序
+}
+
+// 订阅表 - 管理订阅生命周期
+model Subscription {
+  id                String              @id @default(uuid())
+  userId            String              // 用户ID（冗余存储，便于查询）
+  orderId           String              // 关联订单
+  priceId           String              // 商品价格ID
+  
+  // 平台订阅信息
+  platform          PaymentPlatform     // 支付平台
+  platformSubscriptionId String         // 平台订阅ID
+  platformCustomerId String?            // 平台客户ID
+  status            SubscriptionStatus  @default(INCOMPLETE)
+  
+  // 订阅计划
+  planType          PlanType            // 计划类型
+  planInterval      PlanInterval        // 计划周期
+  
+  // 订阅周期管理（统一使用UTC，来自Stripe的时间戳）
+  currentPeriodStart DateTime?          @db.Timestamptz // 当前周期开始 UTC
+  currentPeriodEnd   DateTime?          @db.Timestamptz // 当前周期结束 UTC
+  trialStart        DateTime?           @db.Timestamptz // 试用开始时间 UTC
+  trialEnd          DateTime?           @db.Timestamptz // 试用结束时间 UTC
+  
+  // 取消管理
+  cancelAtPeriodEnd Boolean             @default(false)
+  canceledAt        DateTime?           @db.Timestamptz // 取消时间 UTC
+  cancelReason      Json?               // 取消原因
+
+  metadata          Json?               // 订阅元数据
+  previous_attributes Json?             // 上次更新前的属性（用于跟踪变化）
+  
+  // 时间戳（统一使用UTC）
+  createdAt         DateTime            @default(now()) @db.Timestamptz // UTC时间
+  updatedAt         DateTime?           @updatedAt @db.Timestamptz // UTC时间
+  activatedAt       DateTime?           @db.Timestamptz // 激活时间 UTC
+
+  // 唯一约束和索引
+  @@unique([platform, platformSubscriptionId])  // 平台订阅ID唯一性
+  @@unique([orderId])                            // 一对一关系约束（逻辑层面）
+  @@index([userId])                              // 查询用户订阅
+  @@index([currentPeriodEnd])                    // 查询过期订阅
+  @@index([createdAt])                           // 订阅时间排序
+}
+
+// Webhook事件表 - 简化事件管理
+model PaymentEvent {
+  id          String           @id           // 平台事件ID
+  platform    PaymentPlatform              // 支付平台
+  type        String                       // 事件类型
+  data        Json                         // 事件数据
+  status      EventStatus      @default(PENDING)
+  error       String?                      // 错误信息
+  
+  // 业务对象关联（逻辑关联，无外键约束）
+  orderId         String?                  // 关联订单ID
+  subscriptionId  String?                  // 关联订阅ID  
+  userId          String?                  // 关联用户ID
+  
+  createdAt   DateTime         @default(now()) @db.Timestamptz // UTC时间
+  processedAt DateTime?        @db.Timestamptz // 处理时间 UTC
+
+  // 索引优化
+  @@unique([platform, id])    // 平台事件ID唯一性
+  @@index([orderId])          // 按订单查询事件
+  @@index([userId])           // 按用户查询事件
+  @@index([status])           // 按状态查询事件（用于监控失败事件）
+}
+
+// 订单状态枚举
+enum OrderStatus {
+  PENDING     // 待支付
+  PROCESSING  // 处理中
+  COMPLETED   // 支付完成
+  FAILED      // 支付失败
+  REFUNDED    // 已退款
+  CANCELED    // 已取消
+}
+
+// 产品类型枚举
+enum ProductType {
+  ONE_TIME      // 一次性购买
+  SUBSCRIPTION  // 订阅
+}
+
+// 订阅状态枚举（对应Stripe状态）
+enum SubscriptionStatus {
+  INCOMPLETE          // 未完成
+  INCOMPLETE_EXPIRED  // 未完成已过期
+  TRIALING           // 试用中
+  ACTIVE             // 激活
+  PAST_DUE           // 逾期
+  CANCELED           // 已取消
+  UNPAID             // 未支付
+  PAUSED             // 暂停（某些平台支持）
+}
+
+// 计划类型枚举
+enum PlanType {
+  STANDARD
+  PRO
+}
+
+// 计划周期枚举
+enum PlanInterval {
+  MONTHLY
+  ANNUALLY
+}
+
+// 支付平台枚举
+enum PaymentPlatform {
+  STRIPE
+  LEMON
+  PADDLE
+}
+
+// 事件状态枚举
+enum EventStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  SKIPPED    // 跳过处理
+}
+
+// 货币枚举
+enum Currency {
+  USD
+}

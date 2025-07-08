@@ -1,0 +1,137 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "save": "保存",
+    "continue": "继续",
+    "back": "返回",
+    "next": "下一步",
+    "close": "关闭"
+  },
+  "auth": {
+    "signIn": "登录",
+    "signOut": "退出登录",
+    "logIn": "登录",
+    "logOut": "退出",
+    "signInTitle": "登录以继续",
+    "signInSubtitle": "使用您的 Google 账户",
+    "continueWithGoogle": "使用 Google 继续",
+    "signingIn": "登录中...",
+    "loginSuccessful": "登录成功",
+    "loginFailed": "登录失败，请重试",
+    "profile": "个人资料",
+    "termsPrivacy": "继续即表示您同意我们的条款和隐私政策"
+  },
+  "navigation": {
+    "features": "功能",
+    "pricing": "定价",
+    "about": "关于",
+    "help": "帮助",
+    "contact": "联系",
+    "status": "状态",
+    "terms": "条款",
+    "privacy": "隐私",
+    "cookies": "Cookie"
+  },
+  "footer": {
+    "resources": "资源",
+    "documentation": "文档",
+    "apiReference": "API 参考",
+    "examples": "示例",
+    "blog": "博客",
+    "company": "公司",
+    "careers": "招聘",
+    "partners": "合作伙伴",
+    "legal": "法律",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "cookiePolicy": "Cookie 政策",
+    "security": "安全",
+    "copyright": "版权所有。"
+  },
+  "hero": {
+    "badge": "🚀 使用 ShipNow 快速启动",
+    "headline": "在几天内构建您的 SaaS",
+    "highlightedText": "产品",
+    "subtitle": "完整的 Next.js 模板，包含启动 SaaS 所需的一切。包括身份验证、支付和订阅。",
+    "primaryCTA": "开始使用",
+    "secondaryCTA": "查看功能"
+  },
+  "features": {
+    "title": "快速发布所需的一切",
+    "subtitle": "停止从头构建身份验证和支付。专注于您的产品。",
+    "auth": {
+      "title": "身份验证",
+      "description": "完整的身份验证系统，包含 Google OAuth、用户管理和安全功能。"
+    },
+    "payments": {
+      "title": "支付",
+      "description": "Stripe 集成，支持订阅、一次性支付和客户门户。"
+    },
+    "ui": {
+      "title": "现代 UI",
+      "description": "使用 shadcn/ui 和 Tailwind CSS 构建的精美组件。"
+    },
+    "performance": {
+      "title": "性能",
+      "description": "基于 Next.js 15 构建，具有优化和最佳实践。"
+    }
+  },
+  "pricing": {
+    "title": "简单透明的定价",
+    "subtitle": "选择最适合您的计划",
+    "standard": {
+      "name": "标准版",
+      "description": "非常适合入门",
+      "features": [
+        "最多 10 个项目",
+        "基础分析",
+        "邮件支持",
+        "标准功能"
+      ]
+    },
+    "pro": {
+      "name": "专业版",
+      "description": "适合成长中的企业",
+      "features": [
+        "无限项目",
+        "高级分析",
+        "优先支持",
+        "所有功能"
+      ],
+      "popular": "最受欢迎"
+    }
+  },
+  "cta": {
+    "title": "准备开始构建了吗？",
+    "subtitle": "加入成千上万的开发者，与ShipNow一起更快地发布产品。",
+    "button": "立即开始"
+  },
+  "subscription": {
+    "upgrade": "升级",
+    "manage": "管理订阅",
+    "usageLimit": "已达使用限制",
+    "usageLimitMessage": "您已达到使用限制。升级以继续使用此功能。",
+    "currentPlan": "当前计划",
+    "renewsOn": "续费日期",
+    "canceledOn": "取消日期"
+  },
+  "errors": {
+    "userNotAuthenticated": "请登录以继续。",
+    "invalidCredentials": "邮箱或密码无效。",
+    "sessionExpired": "您的会话已过期。请重新登录。",
+    "subscriptionRequired": "此功能需要订阅。",
+    "usageLimitExceeded": "您已达到使用限制。请升级您的计划。",
+    "insufficientPermissions": "您没有执行此操作的权限。",
+    "resourceNotFound": "未找到请求的资源。",
+    "resourceAlreadyExists": "此资源已存在。",
+    "invalidInput": "请检查您的输入并重试。",
+    "missingRequiredField": "请填写所有必填字段。",
+    "networkError": "网络错误。请检查您的连接。",
+    "serverError": "出了点问题。请稍后重试。",
+    "databaseError": "数据库错误。请稍后重试。",
+    "externalServiceError": "外部服务错误。请稍后重试。"
+  }
+}

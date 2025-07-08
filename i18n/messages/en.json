@@ -1,0 +1,137 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "continue": "Continue",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "logIn": "Log In",
+    "logOut": "Log Out",
+    "signInTitle": "Sign in to continue",
+    "signInSubtitle": "Use your Google account",
+    "continueWithGoogle": "Continue with Google",
+    "signingIn": "Signing in...",
+    "loginSuccessful": "Login successful",
+    "loginFailed": "Login failed, please try again",
+    "profile": "Profile",
+    "termsPrivacy": "By continuing, you agree to our Terms & Privacy Policy"
+  },
+  "navigation": {
+    "features": "Features",
+    "pricing": "Pricing", 
+    "about": "About",
+    "help": "Help",
+    "contact": "Contact",
+    "status": "Status",
+    "terms": "Terms",
+    "privacy": "Privacy",
+    "cookies": "Cookies"
+  },
+  "footer": {
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "apiReference": "API Reference",
+    "examples": "Examples",
+    "blog": "Blog",
+    "company": "Company",
+    "careers": "Careers",
+    "partners": "Partners",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookiePolicy": "Cookie Policy",
+    "security": "Security",
+    "copyright": "All rights reserved."
+  },
+  "hero": {
+    "badge": "🚀 Launch faster with ShipNow",
+    "headline": "Build your SaaS",
+    "highlightedText": " in days",
+    "subtitle": "The complete Next.js template with everything you need to launch your SaaS. Authentication, payments, and subscriptions included.",
+    "primaryCTA": "Get Started",
+    "secondaryCTA": "View Features"
+  },
+  "features": {
+    "title": "Everything you need to ship fast",
+    "subtitle": "Stop building auth and payments from scratch. Focus on your product.",
+    "auth": {
+      "title": "Authentication",
+      "description": "Complete auth system with Google OAuth, user management, and security."
+    },
+    "payments": {
+      "title": "Payments", 
+      "description": "Stripe integration with subscriptions, one-time payments, and customer portal."
+    },
+    "ui": {
+      "title": "Modern UI",
+      "description": "Beautiful components built with shadcn/ui and Tailwind CSS."
+    },
+    "performance": {
+      "title": "Performance",
+      "description": "Built on Next.js 15 with optimizations and best practices."
+    }
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "Choose the plan that works best for you",
+    "standard": {
+      "name": "Standard",
+      "description": "Perfect for getting started",
+      "features": [
+        "Up to 10 projects",
+        "Basic analytics", 
+        "Email support",
+        "Standard features"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "description": "For growing businesses",
+      "features": [
+        "Unlimited projects",
+        "Advanced analytics",
+        "Priority support", 
+        "All features"
+      ],
+      "popular": "Most Popular"
+    }
+  },
+  "cta": {
+    "title": "Ready to start building?",
+    "subtitle": "Join thousands of developers who have shipped faster with ShipNow.",
+    "button": "Get Started Today"
+  },
+  "subscription": {
+    "upgrade": "Upgrade",
+    "manage": "Manage Subscription",
+    "usageLimit": "Usage Limit Reached",
+    "usageLimitMessage": "You've reached your usage limit. Upgrade to continue using this feature.",
+    "currentPlan": "Current Plan",
+    "renewsOn": "Renews on",
+    "canceledOn": "Canceled on"
+  },
+  "errors": {
+    "userNotAuthenticated": "Please sign in to continue.",
+    "invalidCredentials": "Invalid email or password.",
+    "sessionExpired": "Your session has expired. Please sign in again.",
+    "subscriptionRequired": "This feature requires a subscription.",
+    "usageLimitExceeded": "You've reached your usage limit. Please upgrade your plan.",
+    "insufficientPermissions": "You don't have permission to perform this action.",
+    "resourceNotFound": "The requested resource was not found.",
+    "resourceAlreadyExists": "This resource already exists.",
+    "invalidInput": "Please check your input and try again.",
+    "missingRequiredField": "Please fill in all required fields.",
+    "networkError": "Network error. Please check your connection.",
+    "serverError": "Something went wrong. Please try again later.",
+    "databaseError": "Database error. Please try again later.",
+    "externalServiceError": "External service error. Please try again later."
+  }
+}
