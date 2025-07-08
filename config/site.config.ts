@@ -6,8 +6,7 @@ export const siteConfig = {
   description: BRANDING.description,
   url: SITE_CONFIG.url,
   
-  // Contact email and social
-  email: BRANDING.email,
+  // Contact and social
   twitter: BRANDING.twitter,
   
   // Version
