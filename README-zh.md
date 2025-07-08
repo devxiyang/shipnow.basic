@@ -1,14 +1,14 @@
-# ShipNow - Next.js SaaS 模板
+# ShipNow Basic - Next.js 网站模板
 
-启动 SaaS 所需的完整 Next.js 模板。停止从零开始构建身份验证和支付系统。
+简洁现代的 Next.js 网站模板，内置国际化支持。适合着陆页、营销网站和简单的 Web 应用程序。
 
 ## 🌍 多语言支持
 
-**从第一天就实现全球化！** ShipNow 包含完整的国际化支持，支持7种语言：
+**从第一天就实现全球化！** ShipNow Basic 包含完整的国际化支持，支持7种语言：
 - 英语、中文、西班牙语、法语、德语、日语、韩语
 - 自动语言检测和基于URL的路由
 - 页眉中的语言切换器
-- 所有UI组件、错误消息和内容完全翻译
+- 所有UI组件和内容完全翻译
 
 ## 🎯 快速模板设置
 
@@ -22,22 +22,21 @@ npm run init-template
 - 品牌名称、标语和描述
 - 英雄区域内容  
 - 功能描述
-- 定价计划
-- 环境变量
+- 网站配置
+- 基础环境变量
 
 所有更改都应用到 `config/template.config.ts` 以便于自定义。
 
 ## 🚀 功能特性
 
-- **身份验证**: Supabase Auth 与 Google 一键登录
-- **支付**: Stripe 集成与订阅管理
-- **数据库**: PostgreSQL 与 Prisma ORM
+- **🌍 国际化**: 完整的i18n支持，支持7种语言 (next-intl)
 - **UI 组件**: shadcn/ui 支持暗黑模式
 - **类型安全**: 完整的 TypeScript 支持
-- **服务器操作**: 类型安全的数据变更
 - **响应式**: 移动优先设计
 - **SEO 就绪**: 优化的元数据和站点地图
-- **🌍 国际化**: 支持7种语言的 next-intl
+- **现代技术栈**: Next.js 15, React 19, Tailwind CSS v4
+- **快速开发**: 热重载和 TypeScript 支持
+- **清晰架构**: 组织良好的项目结构
 
 ## 🛠️ 技术栈
 
@@ -45,10 +44,6 @@ npm run init-template
 - **语言**: TypeScript
 - **样式**: Tailwind CSS v4
 - **UI 组件**: shadcn/ui
-- **数据库**: PostgreSQL (Supabase)
-- **ORM**: Prisma
-- **身份验证**: Supabase Auth
-- **支付**: Stripe
 - **国际化**: next-intl
 - **部署**: Vercel
 
@@ -57,16 +52,13 @@ npm run init-template
 ### 前置条件
 
 - Node.js 18+
-- PostgreSQL 数据库
-- Stripe 账户
-- Supabase 账户
 
 ### 安装
 
 1. 克隆仓库：
 ```bash
-git clone https://github.com/yourusername/shipnow.pro.git
-cd shipnow.pro
+git clone https://github.com/devxiyang/shipnow.basic.git
+cd shipnow.basic
 ```
 
 2. 安装依赖：
@@ -74,159 +66,80 @@ cd shipnow.pro
 npm install
 ```
 
-3. 设置环境变量：
+3. 设置环境变量（可选）：
 ```bash
 cp .env.example .env.local
 ```
 
-4. 在 `.env.local` 中配置环境变量：
+4. 在 `.env.local` 中配置环境变量（可选）：
 ```bash
-# 数据库
-DATABASE_URL="postgresql://..."
-DIRECT_URL="postgresql://..."
-
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL="https://your-project.supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="your-anon-key"
-SUPABASE_SERVICE_ROLE_KEY="your-service-role-key"
-
-# Stripe
-STRIPE_SECRET_KEY="sk_test_..."
-STRIPE_WEBHOOK_SECRET="whsec_..."
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_..."
-
-# Google OAuth
-GOOGLE_CLIENT_ID="your-google-client-id"
-
 # 站点 URL
 NEXT_PUBLIC_SITE_URL="http://localhost:3000"
+
+# 分析（可选）
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 ```
 
-5. 设置数据库：
-```bash
-cd prisma
-make init  # 首次设置
-# 或者
-make migrate  # 应用迁移
-```
-
-6. 启动开发服务器：
+5. 启动开发服务器：
 ```bash
 npm run dev
 ```
 
 在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看您的应用。
 
-## ⚙️ 详细设置指南
+## ⚙️ 开发命令
 
-### 环境变量
-
-复制 `.env.example` 到 `.env.local` 并配置各个部分：
-
-#### 数据库配置
+### 基础命令
 ```bash
-# 从您的 Supabase 项目或 PostgreSQL 提供商获取
-DATABASE_URL="postgresql://postgres:[PASSWORD]@[HOST]:5432/[DATABASE]"
-DIRECT_URL="postgresql://postgres:[PASSWORD]@[HOST]:5432/[DATABASE]"
+npm run dev          # 启动开发服务器 (http://localhost:3000)
+npm run build        # 构建生产版本
+npm run start        # 启动生产服务器
+npm run lint         # 运行 ESLint
+npm run type-check   # 检查 TypeScript 类型
 ```
 
-#### Supabase 配置
-1. 在 [supabase.com](https://supabase.com) 创建新项目
-2. 转到设置 > API 获取您的密钥：
-```bash
-NEXT_PUBLIC_SUPABASE_URL="https://[YOUR-PROJECT].supabase.co"
-NEXT_PUBLIC_SUPABASE_ANON_KEY="[YOUR-ANON-KEY]"
-SUPABASE_SERVICE_ROLE_KEY="[YOUR-SERVICE-ROLE-KEY]"
+### 模板自定义
+
+模板在 `config/template.config.ts` 中使用集中配置系统：
+
+**品牌配置：**
+```typescript
+export const BRANDING = {
+  name: "您的网站",
+  tagline: "您的自定义标语", 
+  description: "您的网站描述",
+  email: "contact@yoursite.com",
+  twitter: "devxiyang",
+  website: "https://yoursite.com"
+};
 ```
 
-#### Stripe 配置
-1. 在 [stripe.com](https://stripe.com) 创建账户
-2. 从仪表板获取您的 API 密钥：
-```bash
-STRIPE_SECRET_KEY="sk_test_..." # 生产环境使用 sk_live_
-STRIPE_WEBHOOK_SECRET="whsec_..." # 来自 webhook 端点
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_test_..." # 生产环境使用 pk_live_
+**内容自定义：**
+```typescript
+export const CONTENT = {
+  hero: {
+    headline: "构建您的网站",
+    highlightedText: " 美观地",
+    subtitle: "您的自定义副标题..."
+  },
+  features: { /* ... */ }
+};
 ```
-
-#### Google OAuth 设置
-1. 转到 [Google Cloud Console](https://console.cloud.google.com)
-2. 创建新项目或选择现有项目
-3. 启用 Google+ API
-4. 创建 OAuth 2.0 凭据：
-```bash
-GOOGLE_CLIENT_ID="[CLIENT-ID].apps.googleusercontent.com"
-```
-
-#### 站点配置
-```bash
-NEXT_PUBLIC_SITE_URL="http://localhost:3000" # 生产环境需要更新
-NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX" # 可选
-```
-
-### 数据库设置
-
-模板使用 Prisma 与 PostgreSQL 数据库：
-
-```bash
-# 导航到 prisma 目录
-cd prisma
-
-# 首次设置（创建数据库并运行迁移）
-make init
-
-# 后续模式更改
-make migrate
-
-# 在浏览器中查看/编辑数据
-make studio
-
-# 在模式更改后重新生成 Prisma 客户端
-make generate
-```
-
-### Stripe 设置
-
-1. **在 Stripe 仪表板中创建产品：**
-   - 标准计划：$4.90/月
-   - 专业计划：$9.90/月
-
-2. **配置 Webhook 端点：**
-   - URL：`https://yourdomain.com/api/stripe/webhook`
-   - 事件：`customer.subscription.created`、`customer.subscription.updated`、`customer.subscription.deleted`、`invoice.payment_succeeded`
-
-3. **在配置中更新产品 ID：**
-   ```typescript
-   // config/stripe.config.ts
-   export const STRIPE_CONFIG = {
-     STANDARD_PRICE_ID: "price_xxxxx", // 您的 Stripe 价格 ID
-     PRO_PRICE_ID: "price_xxxxx"       // 您的 Stripe 价格 ID
-   }
-   ```
-
-### Google OAuth 设置
-
-1. **配置 OAuth 同意屏幕**
-2. **添加授权域：**
-   - `localhost`（用于开发）
-   - 您的生产域
-3. **在 Supabase 中设置重定向 URI：**
-   - 转到 Supabase 仪表板 > 身份验证 > 设置
-   - 添加：`https://yourdomain.com/auth/callback`
 
 ## 📝 项目结构
 
 ```
-shipnow.pro/
+shipnow.basic/
 ├── app/                  # Next.js App Router 页面
 │   ├── [locale]/        # 国际化路由
-│   ├── api/             # API 路由
+│   ├── api/             # API 路由（最小化）
 │   └── globals.css      # 全局样式
 ├── components/          # React 组件
 │   ├── ui/             # shadcn/ui 组件
-│   └── auth/           # 身份验证组件
+│   └── layout/         # 布局组件
 ├── config/             # 配置文件
 │   ├── site.config.ts  # 站点元数据
-│   └── stripe.config.ts # Stripe 配置
+│   └── template.config.ts # 模板配置
 ├── i18n/               # 国际化
 │   ├── config.ts       # i18n 配置
 │   └── messages/       # 翻译文件
@@ -237,45 +150,47 @@ shipnow.pro/
 │       ├── de.json     # 德语
 │       ├── ja.json     # 日语
 │       └── ko.json     # 韩语
-├── lib/                # 核心业务逻辑
-│   ├── action/         # 服务器操作
+├── lib/                # 工具和辅助函数
 │   ├── hooks/          # 自定义 React hooks
-│   ├── stripe/         # Stripe 集成
-│   ├── supabase/       # Supabase 客户端
-│   └── auth/           # 身份验证提供商
-├── prisma/             # 数据库模式
-├── types/              # TypeScript 类型
+│   ├── utils/          # 工具函数
+│   └── types/          # TypeScript 类型
 └── middleware.ts       # Next.js 中间件
 ```
 
 ## 🔧 配置
 
-### 模板自定义
+### 网站配置
 
-模板在 `config/template.config.ts` 中使用集中配置系统：
+在 `config/site.config.ts` 中更新您的网站元数据：
 
-**品牌配置：**
 ```typescript
-export const BRANDING = {
-  name: "YourSaaS",
-  tagline: "您的自定义标语", 
-  description: "您的 SaaS 描述",
-  email: "support@yoursaas.com",
-  twitter: "@yoursaas",
-  website: "https://yoursaas.com"
-};
+export const siteConfig = {
+  name: "您的网站",
+  title: "您的网站标题",
+  description: "您的网站描述",
+  url: "https://yoursite.com",
+  email: "contact@yoursite.com",
+  twitter: "devxiyang"
+}
 ```
 
-**内容自定义：**
+### 内容自定义
+
+在 `config/template.config.ts` 中自定义您的内容：
+
 ```typescript
 export const CONTENT = {
   hero: {
-    headline: "构建您的 SaaS",
-    highlightedText: " 在几天内",
+    headline: "构建您的网站",
+    highlightedText: " 美观地",
     subtitle: "您的自定义副标题..."
   },
-  features: { /* ... */ },
-  pricing: { /* ... */ }
+  features: [
+    {
+      title: "功能 1",
+      description: "您的功能描述"
+    }
+  ]
 };
 ```
 
@@ -306,10 +221,19 @@ export const locales = ['en', 'zh', 'es', 'fr', 'de', 'ja', 'ko', 'your-locale']
 ```json
 {
   "common": { "loading": "加载中..." },
-  "auth": { "signIn": "登录" },
-  "hero": { "headline": "构建您的 SaaS" },
+  "hero": { "headline": "构建您的网站" },
   "features": { "title": "功能" },
-  "pricing": { "title": "定价" }
+  "navigation": { "home": "首页" }
+}
+```
+
+**使用翻译：**
+```typescript
+import { useTranslations } from 'next-intl'
+
+function MyComponent() {
+  const t = useTranslations('hero')
+  return <h1>{t('headline')}</h1>
 }
 ```
 
@@ -370,21 +294,21 @@ export const CONTENT = {
 }
 ```
 
-#### 3. 更新定价计划
+#### 3. 添加您自己的页面
+在 `app/[locale]/` 目录中创建新页面：
+
 ```typescript
-// config/template.config.ts
-export const CONTENT = {
-  pricing: {
-    plans: [
-      {
-        name: "入门版",
-        price: 9.99,
-        interval: "month",
-        features: ["功能 1", "功能 2"],
-        cta: "开始免费试用"
-      }
-    ]
-  }
+// app/[locale]/about/page.tsx
+import { useTranslations } from 'next-intl'
+
+export default function About() {
+  const t = useTranslations('about')
+  return (
+    <div>
+      <h1>{t('title')}</h1>
+      <p>{t('description')}</p>
+    </div>
+  )
 }
 ```
 
@@ -394,7 +318,7 @@ export const CONTENT = {
 用户可以使用页眉中的语言选择器切换语言。应用自动：
 - 更新 URL（例如，`/en/page` → `/es/page`）
 - 更改所有 UI 文本
-- 保持用户会话和状态
+- 保持导航状态
 
 #### 添加自定义翻译
 ```typescript
@@ -421,40 +345,26 @@ function MyComponent() {
 ```bash
 # 开发
 npm run dev              # 启动开发服务器
-npm run dev:https        # 使用 HTTPS 启动（用于 OAuth 测试）
-
-# 构建
 npm run build            # 构建生产版本
 npm run start            # 启动生产服务器
-
-# 代码质量
 npm run lint             # 运行 ESLint
 npm run type-check       # 检查 TypeScript
-
-# 数据库（从 /prisma 目录）
-make init               # 首次数据库设置
-make migrate            # 运行迁移
-make studio             # 打开 Prisma Studio
-make generate           # 重新生成 Prisma 客户端
-make reset              # 重置数据库（⚠️ 破坏性操作）
 ```
 
 ### 部署检查清单
 
 #### 部署前：
 - [ ] 将 `NEXT_PUBLIC_SITE_URL` 更新为您的域名
-- [ ] 设置生产数据库
-- [ ] 配置生产 Stripe 密钥
-- [ ] 为 Google OAuth 设置域名验证
-- [ ] 在 Stripe 测试模式下测试所有支付流程
-- [ ] 配置 webhook 端点
+- [ ] 测试所有页面和翻译
+- [ ] 验证响应式设计
+- [ ] 检查 SEO 元数据
+- [ ] 测试性能
 
 #### 生产环境变量：
 ```bash
-# 使用生产值
-STRIPE_SECRET_KEY="sk_live_..."
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY="pk_live_..."
+# 为生产环境更新
 NEXT_PUBLIC_SITE_URL="https://yourdomain.com"
+NEXT_PUBLIC_GOOGLE_ANALYTICS_ID="G-XXXXXXXXXX"
 ```
 
 ## 🔧 故障排除
