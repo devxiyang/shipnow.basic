@@ -1,11 +1,7 @@
-import GoogleOneTap from "@/components/auth/GoogleOneTap";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { siteConfig } from "@/config/site.config";
-import { AuthProvider } from "@/lib/auth";
-import { SubscriptionProvider } from "@/lib/subscription";
-import { AuthModalProvider } from "@/lib/hooks/useModals";
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -100,20 +96,13 @@ export default async function LocaleLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <AuthProvider>
-              <SubscriptionProvider>
-                <AuthModalProvider>
-                  <GoogleOneTap />
-                  <main className="min-h-screen flex flex-col">
-                    <div className="flex-1">
-                      {children}
-                    </div>
-                    <Footer />
-                  </main>
-                  <Toaster position="top-center" />
-                </AuthModalProvider>
-              </SubscriptionProvider>
-            </AuthProvider>
+            <main className="min-h-screen flex flex-col">
+              <div className="flex-1">
+                {children}
+              </div>
+              <Footer />
+            </main>
+            <Toaster position="top-center" />
           </ThemeProvider>
         </NextIntlClientProvider>
         <Analytics />

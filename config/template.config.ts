@@ -13,9 +13,8 @@ export const BRANDING = {
   description: "A clean Next.js template with internationalization support. Perfect for simple independent websites.",
   
   // Contact & Social
-  email: "support@shipnow.pro",
-  twitter: "@shipnow",
-  website: "https://shipnow.pro",
+  twitter: "devxiyang",
+  website: "https://github.com/devxiyang/shipnow.basic",
   
   // Logo configuration
   logo: {
@@ -28,7 +27,7 @@ export const BRANDING = {
 // ============= SITE CONFIGURATION =============
 export const SITE_CONFIG = {
   title: "ShipNow - Simple Independent Website",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://shipnow.pro",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/devxiyang/shipnow.basic",
   version: "1.0.0",
 } as const;
 
@@ -151,20 +150,6 @@ export const SEO = {
 
 // ============= FEATURE FLAGS =============
 export const FEATURES = {
-  // Authentication options
-  auth: {
-    googleOneTap: true,
-    emailSignup: false,
-    socialLogin: true
-  },
-  
-  // Payment options  
-  payments: {
-    stripe: true,
-    lemonsqueezy: false,
-    paddle: false
-  },
-  
   // UI features
   ui: {
     darkMode: true,
@@ -186,15 +171,13 @@ export function getSiteUrl(): string {
   if (process.env.NODE_ENV === 'development') {
     return process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   }
-  return process.env.NEXT_PUBLIC_SITE_URL || BRANDING.website;
+  return process.env.NEXT_PUBLIC_SITE_URL || "https://github.com/devxiyang/shipnow.basic";
 }
 
 // Type exports for TypeScript support
 export type BrandingConfig = typeof BRANDING;
 export type SiteConfig = typeof SITE_CONFIG;
 export type ContentConfig = typeof CONTENT;
-export type ModalsConfig = typeof MODALS;
 export type NavigationConfig = typeof NAVIGATION;
 export type SEOConfig = typeof SEO;
-export type SubscriptionPlansConfig = typeof SUBSCRIPTION_PLANS;
 export type FeaturesConfig = typeof FEATURES;

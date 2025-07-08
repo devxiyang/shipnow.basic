@@ -1,22 +1,4 @@
-// Common type definitions for the SaaS template
-
-// User related types
-export interface User {
-  id: string;
-  email: string;
-  name?: string;
-  avatar?: string;
-  createdAt: string;
-}
-
-// Subscription related types
-export interface SubscriptionPlan {
-  id: string;
-  name: string;
-  price: number;
-  interval: 'month' | 'year';
-  features: string[];
-}
+// Common type definitions for the website template
 
 // API Response types
 export interface ApiResponse<T = any> {
@@ -58,13 +40,6 @@ export interface NavItem {
   icon?: React.ComponentType;
 }
 
-// Feature usage tracking
-export interface UsageLimit {
-  feature: string;
-  limit: number;
-  used: number;
-  resetDate?: string;
-}
 
 // Pagination
 export interface PaginationProps {

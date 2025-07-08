@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { UserMenu } from "@/components/auth/UserMenu";
 import { Logo } from "@/components/logo";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
@@ -18,7 +17,6 @@ export function Header(props: React.HTMLAttributes<HTMLElement>) {
       {/* Right: Actions */}
       <div className="flex items-center gap-2">
         <LanguageSwitcher />
-        <UserMenu />
         <ThemeToggle />
       </div>
     </header>

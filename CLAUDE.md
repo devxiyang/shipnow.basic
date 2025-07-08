@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 15 SaaS template (ShipNow) that provides a complete foundation for building SaaS applications with authentication, payments, and subscription management.
+This is a Next.js 15 independent website template (ShipNow) that provides a clean foundation for building simple websites with internationalization support.
 
 ## Development Commands
 
@@ -17,13 +17,6 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
-### Database Commands (run from /prisma directory)
-```bash
-make init            # Initialize database (first time)
-make migrate         # Apply schema changes
-make studio          # Open Prisma Studio GUI
-make generate        # Regenerate Prisma Client
-```
 
 ### Testing
 No test framework is currently configured. Use TypeScript and ESLint for code quality.
@@ -33,59 +26,35 @@ No test framework is currently configured. Use TypeScript and ESLint for code qu
 ### Technology Stack
 - **Frontend**: Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS v4
 - **UI Components**: shadcn/ui - All UI components use shadcn/ui
-- **Backend**: Next.js API routes, Prisma ORM, PostgreSQL (Supabase)
-- **Auth**: Supabase Auth with Google One-Tap login
-- **Payments**: Stripe (subscriptions)
+- **Backend**: Next.js API routes (optional), Prisma ORM (optional)
+- **Internationalization**: next-intl with support for 7 languages
 
 ### Key Directories
 - `/app` - Next.js App Router pages and API routes
 - `/components` - React components organized by domain
   - `/ui` - shadcn/ui base components (DO NOT put custom components here)
-  - `/auth` - Authentication related components
-  - `/subscription` - Subscription and billing components
 - `/lib` - Core business logic and integrations
-  - `/auth` - Authentication providers and utilities
-  - `/subscription` - Subscription management and providers
-  - `/action` - Server actions for data mutations
-  - `/hooks` - Custom React hooks
-  - `/stripe` - Stripe integration and utilities
-  - `/supabase` - Supabase client and utilities
   - `/utils` - Utility functions (formatters, time, error handling)
   - `/types` - TypeScript type definitions
 - `/config` - Configuration files
   - `template.config.ts` - Main template configuration
-  - `stripe.config.ts` - Stripe pricing and product config
-  - `subscription.config.ts` - Subscription features config
 - `/i18n` - Internationalization
   - `config.ts` - i18n configuration and supported locales
   - `/messages` - Translation files for all supported languages
-- `/prisma` - Database schema and migrations
 
 ### Important Patterns
 1. **Server Components by default** - Add `"use client"` only when needed
-2. **Server Actions** - Use for data mutations (in `/lib/action`)
-3. **Path Aliases** - Use `@/` for imports from root
-4. **Component Organization** - 
+2. **Path Aliases** - Use `@/` for imports from root
+3. **Component Organization** - 
    - shadcn/ui components ONLY in `/components/ui`
-   - Custom components organized by domain (auth, subscription, etc.)
-5. **Modular Architecture** - Each feature module exports through index.ts
-   - Auth: `import { useAuth, AuthProvider } from '@/lib/auth'`
-   - Subscription: `import { useSubscription, SubscriptionProvider } from '@/lib/subscription'`
-6. **Configuration** - Organized config files in `/config`
+   - Custom components organized by domain
+4. **Configuration** - Organized config files in `/config`
    - `template.config.ts`: Main template configuration (branding, content, features)
-   - `stripe.config.ts`: Stripe products, pricing, and helpers
-   - `subscription.config.ts`: Subscription feature configuration
-7. **Error Handling** - Standardized error system with codes and messages
+5. **Error Handling** - Standardized error system with codes and messages
    - Use `AppError` class for throwing structured errors
    - Use `ERROR_CODES` constants instead of magic strings
-   - Server actions should return `ApiResponse<T>` with success/error structure
 
 ### Core Features
-- Google authentication with Supabase
-- Subscription management (Standard: $4.90/mo, Pro: $9.90/mo)
-- Customer portal for managing subscriptions
-- User profile management
-- Usage tracking and limits
 - Responsive design with dark mode support
 - **🌍 Internationalization**: Complete i18n support with 7 languages
   - English, Chinese, Spanish, French, German, Japanese, Korean
@@ -93,15 +62,10 @@ No test framework is currently configured. Use TypeScript and ESLint for code qu
   - Language switcher in header
   - All UI components and content fully translated
 
-### Database Schema
-Key models: Order, Subscription, PaymentEvent
-
 ### Development Workflow
-1. Make database schema changes in `/prisma/schema.prisma`
-2. Run `make migrate` from `/prisma` directory
-3. Server actions automatically revalidate paths
-4. Use Suspense boundaries for loading states
-5. Handle errors with proper user feedback using `AppError` and `ERROR_CODES`
+1. Components are server-side by default
+2. Use Suspense boundaries for loading states
+3. Handle errors with proper user feedback using `AppError` and `ERROR_CODES`
 
 ### Next.js 15 Important Changes
 
@@ -289,23 +253,6 @@ try {
 ## Environment Variables Required
 
 ```bash
-# Database
-DATABASE_URL=
-DIRECT_URL=
-
-# Supabase
-NEXT_PUBLIC_SUPABASE_URL=
-NEXT_PUBLIC_SUPABASE_ANON_KEY=
-SUPABASE_SERVICE_ROLE_KEY=
-
-# Stripe
-STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
-NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
-
-# Google OAuth
-GOOGLE_CLIENT_ID=
-
 # Site URL
 NEXT_PUBLIC_SITE_URL=
 

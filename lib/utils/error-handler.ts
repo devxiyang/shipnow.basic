@@ -2,16 +2,6 @@ import { toast } from 'sonner';
 
 // Error codes - using descriptive strings instead of numbers
 export const ERROR_CODES = {
-  // Authentication errors
-  USER_NOT_AUTHENTICATED: 'USER_NOT_AUTHENTICATED',
-  INVALID_CREDENTIALS: 'INVALID_CREDENTIALS',
-  SESSION_EXPIRED: 'SESSION_EXPIRED',
-  
-  // Authorization errors
-  SUBSCRIPTION_REQUIRED: 'SUBSCRIPTION_REQUIRED',
-  USAGE_LIMIT_EXCEEDED: 'USAGE_LIMIT_EXCEEDED',
-  INSUFFICIENT_PERMISSIONS: 'INSUFFICIENT_PERMISSIONS',
-  
   // Resource errors
   RESOURCE_NOT_FOUND: 'RESOURCE_NOT_FOUND',
   RESOURCE_ALREADY_EXISTS: 'RESOURCE_ALREADY_EXISTS',
@@ -31,16 +21,6 @@ export type ErrorCode = typeof ERROR_CODES[keyof typeof ERROR_CODES];
 
 // Default user-friendly messages for each error code
 const DEFAULT_ERROR_MESSAGES: Record<ErrorCode, string> = {
-  // Authentication errors
-  [ERROR_CODES.USER_NOT_AUTHENTICATED]: "Please sign in to continue.",
-  [ERROR_CODES.INVALID_CREDENTIALS]: "Invalid email or password.",
-  [ERROR_CODES.SESSION_EXPIRED]: "Your session has expired. Please sign in again.",
-  
-  // Authorization errors
-  [ERROR_CODES.SUBSCRIPTION_REQUIRED]: "This feature requires a subscription.",
-  [ERROR_CODES.USAGE_LIMIT_EXCEEDED]: "You've reached your usage limit. Please upgrade your plan.",
-  [ERROR_CODES.INSUFFICIENT_PERMISSIONS]: "You don't have permission to perform this action.",
-  
   // Resource errors
   [ERROR_CODES.RESOURCE_NOT_FOUND]: "The requested resource was not found.",
   [ERROR_CODES.RESOURCE_ALREADY_EXISTS]: "This resource already exists.",
@@ -151,15 +131,6 @@ export function handleActionError(error: unknown, context?: string): ErrorRespon
   if (error instanceof Error) {
     const message = error.message.toLowerCase();
     
-    if (message.includes('not authenticated') || message.includes('unauthorized')) {
-      return createErrorResponse(ERROR_CODES.USER_NOT_AUTHENTICATED);
-    }
-    if (message.includes('subscription')) {
-      return createErrorResponse(ERROR_CODES.SUBSCRIPTION_REQUIRED);
-    }
-    if (message.includes('limit')) {
-      return createErrorResponse(ERROR_CODES.USAGE_LIMIT_EXCEEDED);
-    }
     if (message.includes('not found')) {
       return createErrorResponse(ERROR_CODES.RESOURCE_NOT_FOUND);
     }
@@ -189,16 +160,6 @@ export function handleNetworkError(error: unknown, context?: string): void {
   toast.error(DEFAULT_ERROR_MESSAGES[ERROR_CODES.NETWORK_ERROR]);
 }
 
-/**
- * Handle permission errors
- */
-export function handlePermissionError(featureName?: string): void {
-  const message = featureName 
-    ? `Access denied for ${featureName}. Please upgrade your plan.`
-    : DEFAULT_ERROR_MESSAGES[ERROR_CODES.INSUFFICIENT_PERMISSIONS];
-  
-  toast.error(message);
-}
 
 /**
  * Create error boundary handler
