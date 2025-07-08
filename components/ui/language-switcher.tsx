@@ -28,16 +28,12 @@ export function LanguageSwitcher() {
   const locale = useLocale()
 
   const switchLocale = (newLocale: string) => {
-    // Remove current locale from pathname if it exists
-    const currentPath = pathname.replace(`/${locale}`, '') || '/'
+    // With localePrefix: 'always', all locales have prefix
+    // Extract path without current locale prefix
+    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
     
-    // Navigate to new locale path
-    if (newLocale === 'en') {
-      // For default locale, don't include locale prefix
-      router.push(currentPath)
-    } else {
-      router.push(`/${newLocale}${currentPath}`)
-    }
+    // Navigate to new locale with prefix
+    router.push(`/${newLocale}${pathWithoutLocale}`)
   }
 
   return (
