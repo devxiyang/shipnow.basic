@@ -10,126 +10,68 @@
     "next": "次へ",
     "close": "閉じる"
   },
-  "auth": {
-    "signIn": "サインイン",
-    "signOut": "サインアウト",
-    "logIn": "ログイン",
-    "logOut": "ログアウト",
-    "signInTitle": "続行するにはサインインしてください",
-    "signInSubtitle": "Googleアカウントを使用",
-    "continueWithGoogle": "Googleで続行",
-    "signingIn": "サインイン中...",
-    "loginSuccessful": "ログイン成功",
-    "loginFailed": "ログインに失敗しました。もう一度お試しください",
-    "profile": "プロフィール",
-    "termsPrivacy": "続行することで、利用規約とプライバシーポリシーに同意したものとみなされます"
-  },
   "navigation": {
     "features": "機能",
-    "pricing": "料金",
-    "about": "について",
+    "about": "概要",
     "help": "ヘルプ",
-    "contact": "お問い合わせ",
-    "status": "ステータス",
+    "contact": "連絡先",
     "terms": "利用規約",
-    "privacy": "プライバシー",
-    "cookies": "クッキー"
+    "privacy": "プライバシー"
   },
   "footer": {
-    "resources": "リソース",
-    "documentation": "ドキュメント",
-    "apiReference": "APIリファレンス",
-    "examples": "例",
-    "blog": "ブログ",
-    "company": "会社",
-    "careers": "採用情報",
-    "partners": "パートナー",
+    "product": "製品",
     "legal": "法的事項",
     "privacyPolicy": "プライバシーポリシー",
     "termsOfService": "利用規約",
-    "cookiePolicy": "クッキーポリシー",
-    "security": "セキュリティ",
     "copyright": "全著作権所有。"
   },
   "hero": {
-    "badge": "🚀 ShipNowでより速く起動",
-    "headline": "SaaSを構築",
-    "highlightedText": "数日で",
-    "subtitle": "SaaSの立ち上げに必要なすべてを含む完全なNext.jsテンプレート。認証、支払い、サブスクリプションが含まれています。",
-    "primaryCTA": "開始する",
+    "badge": "🚀 シンプル & クリーン",
+    "headline": "ウェブサイトを構築",
+    "highlightedText": "素早く",
+    "subtitle": "国際化サポートを備えたクリーンなNext.jsテンプレート。シンプルな独立ウェブサイトやランディングページに最適です。",
+    "primaryCTA": "始める",
     "secondaryCTA": "機能を見る"
   },
   "features": {
-    "title": "迅速な出荷に必要なすべて",
-    "subtitle": "認証と支払いをゼロから構築するのをやめましょう。製品に集中してください。",
-    "auth": {
-      "title": "認証",
-      "description": "Google OAuth、ユーザー管理、セキュリティを含む完全な認証システム。"
+    "title": "モダンなウェブサイトに必要なすべて",
+    "subtitle": "クリーンでレスポンシブ、あなたのニーズに合わせてカスタマイズ準備完了。",
+    "i18n": {
+      "title": "国際化",
+      "description": "自動ルーティングとローカライゼーションを備えた複数言語の組み込みサポート。"
     },
-    "payments": {
-      "title": "支払い",
-      "description": "サブスクリプション、一回限りの支払い、カスタマーポータルを含むStripe統合。"
+    "stack": {
+      "title": "モダンスタック",
+      "description": "Next.js 15、React 19、TypeScript、Tailwind CSS v4で最高の開発体験。"
     },
-    "ui": {
-      "title": "モダンUI",
-      "description": "shadcn/uiとTailwind CSSで構築された美しいコンポーネント。"
+    "components": {
+      "title": "サーバーコンポーネント",
+      "description": "React Server ComponentsとNext.js App Routerで最適化されたパフォーマンス。"
     },
-    "performance": {
-      "title": "パフォーマンス",
-      "description": "最適化とベストプラクティスを含むNext.js 15上に構築。"
-    }
-  },
-  "pricing": {
-    "title": "シンプルで透明な料金体系",
-    "subtitle": "あなたに最適なプランを選択してください",
-    "standard": {
-      "name": "スタンダード",
-      "description": "始めるのに最適",
-      "features": [
-        "最大10プロジェクト",
-        "基本分析",
-        "メールサポート",
-        "標準機能"
-      ]
+    "darkMode": {
+      "title": "ダークモード",
+      "description": "スムーズなトランジションとテーマの永続化を備えた美しいダークとライトテーマ。"
     },
-    "pro": {
-      "name": "プロ",
-      "description": "成長企業向け",
-      "features": [
-        "無制限プロジェクト",
-        "高度な分析",
-        "優先サポート",
-        "すべての機能"
-      ],
-      "popular": "最も人気"
+    "responsive": {
+      "title": "レスポンシブデザイン",
+      "description": "すべてのデバイスとスクリーンサイズで完璧に動作する完全レスポンシブレイアウト。"
+    },
+    "ready": {
+      "title": "本番準備完了",
+      "description": "エラーハンドリング、ローディング状態、SEO最適化が組み込まれています。"
     }
   },
   "cta": {
-    "title": "構築を始める準備はできましたか？",
-    "subtitle": "ShipNowでより速く出荷した数千人の開発者に参加しましょう。",
-    "button": "今日始める"
-  },
-  "subscription": {
-    "upgrade": "アップグレード",
-    "manage": "サブスクリプション管理",
-    "usageLimit": "使用制限に達しました",
-    "usageLimitMessage": "使用制限に達しました。この機能を引き続き使用するにはアップグレードしてください。",
-    "currentPlan": "現在のプラン",
-    "renewsOn": "更新日",
-    "canceledOn": "キャンセル日"
+    "title": "ウェブサイトを構築する準備はできましたか？",
+    "subtitle": "今日からこのクリーンでモダンなテンプレートを始めましょう。",
+    "button": "今すぐ構築を開始"
   },
   "errors": {
-    "userNotAuthenticated": "続行するにはログインしてください。",
-    "invalidCredentials": "無効なメールアドレスまたはパスワード。",
-    "sessionExpired": "セッションが期限切れです。再度ログインしてください。",
-    "subscriptionRequired": "この機能にはサブスクリプションが必要です。",
-    "usageLimitExceeded": "使用制限に達しました。プランをアップグレードしてください。",
-    "insufficientPermissions": "この操作を実行する権限がありません。",
     "resourceNotFound": "要求されたリソースが見つかりません。",
     "resourceAlreadyExists": "このリソースは既に存在します。",
-    "invalidInput": "入力を確認して再試行してください。",
+    "invalidInput": "入力内容をご確認の上、再度お試しください。",
     "missingRequiredField": "すべての必須フィールドを入力してください。",
-    "networkError": "ネットワークエラー。接続を確認してください。",
+    "networkError": "ネットワークエラー。接続をご確認ください。",
     "serverError": "問題が発生しました。後でもう一度お試しください。",
     "databaseError": "データベースエラー。後でもう一度お試しください。",
     "externalServiceError": "外部サービスエラー。後でもう一度お試しください。"

@@ -1,6 +1,6 @@
 {
   "common": {
-    "loading": "Wird geladen...",
+    "loading": "Laden...",
     "error": "Fehler",
     "success": "Erfolg",
     "cancel": "Abbrechen",
@@ -10,128 +10,70 @@
     "next": "Weiter",
     "close": "Schließen"
   },
-  "auth": {
-    "signIn": "Anmelden",
-    "signOut": "Abmelden",
-    "logIn": "Einloggen",
-    "logOut": "Ausloggen",
-    "signInTitle": "Anmelden um fortzufahren",
-    "signInSubtitle": "Verwenden Sie Ihr Google-Konto",
-    "continueWithGoogle": "Mit Google fortfahren",
-    "signingIn": "Anmeldung läuft...",
-    "loginSuccessful": "Anmeldung erfolgreich",
-    "loginFailed": "Anmeldung fehlgeschlagen, bitte versuchen Sie es erneut",
-    "profile": "Profil",
-    "termsPrivacy": "Durch Fortfahren stimmen Sie unseren Nutzungsbedingungen und Datenschutzrichtlinien zu"
-  },
   "navigation": {
     "features": "Funktionen",
-    "pricing": "Preise",
-    "about": "Über uns",
+    "about": "Über",
     "help": "Hilfe",
     "contact": "Kontakt",
-    "status": "Status",
-    "terms": "Nutzungsbedingungen",
-    "privacy": "Datenschutz",
-    "cookies": "Cookies"
+    "terms": "Bedingungen",
+    "privacy": "Datenschutz"
   },
   "footer": {
-    "resources": "Ressourcen",
-    "documentation": "Dokumentation",
-    "apiReference": "API-Referenz",
-    "examples": "Beispiele",
-    "blog": "Blog",
-    "company": "Unternehmen",
-    "careers": "Karriere",
-    "partners": "Partner",
+    "product": "Produkt",
     "legal": "Rechtliches",
     "privacyPolicy": "Datenschutzrichtlinie",
     "termsOfService": "Nutzungsbedingungen",
-    "cookiePolicy": "Cookie-Richtlinie",
-    "security": "Sicherheit",
     "copyright": "Alle Rechte vorbehalten."
   },
   "hero": {
-    "badge": "🚀 Schneller starten mit ShipNow",
-    "headline": "Erstellen Sie Ihr SaaS",
-    "highlightedText": " in wenigen Tagen",
-    "subtitle": "Die vollständige Next.js-Vorlage mit allem, was Sie zum Starten Ihres SaaS benötigen. Authentifizierung, Zahlungen und Abonnements inklusive.",
+    "badge": "🚀 Einfach & Sauber",
+    "headline": "Erstellen Sie Ihre Website",
+    "highlightedText": " schnell",
+    "subtitle": "Ein sauberes Next.js-Template mit Internationalisierungsunterstützung. Perfekt für einfache unabhängige Websites und Landingpages.",
     "primaryCTA": "Loslegen",
-    "secondaryCTA": "Funktionen ansehen"
+    "secondaryCTA": "Funktionen anzeigen"
   },
   "features": {
-    "title": "Alles was Sie brauchen, um schnell zu liefern",
-    "subtitle": "Hören Sie auf, Authentifizierung und Zahlungen von Grund auf zu erstellen. Konzentrieren Sie sich auf Ihr Produkt.",
-    "auth": {
-      "title": "Authentifizierung",
-      "description": "Vollständiges Authentifizierungssystem mit Google OAuth, Benutzerverwaltung und Sicherheit."
+    "title": "Alles was Sie für eine moderne Website brauchen",
+    "subtitle": "Sauber, responsiv und bereit zur Anpassung an Ihre Bedürfnisse.",
+    "i18n": {
+      "title": "Internationalisierung",
+      "description": "Eingebaute Unterstützung für mehrere Sprachen mit automatischem Routing und Lokalisierung."
     },
-    "payments": {
-      "title": "Zahlungen",
-      "description": "Stripe-Integration mit Abonnements, Einmalzahlungen und Kundenportal."
+    "stack": {
+      "title": "Moderner Stack",
+      "description": "Next.js 15, React 19, TypeScript, Tailwind CSS v4 für die beste Entwicklererfahrung."
     },
-    "ui": {
-      "title": "Moderne Benutzeroberfläche",
-      "description": "Schöne Komponenten erstellt mit shadcn/ui und Tailwind CSS."
+    "components": {
+      "title": "Server-Komponenten",
+      "description": "Optimierte Performance mit React Server Components und Next.js App Router."
     },
-    "performance": {
-      "title": "Leistung",
-      "description": "Basiert auf Next.js 15 mit Optimierungen und bewährten Praktiken."
-    }
-  },
-  "pricing": {
-    "title": "Einfache, transparente Preisgestaltung",
-    "subtitle": "Wählen Sie den Plan, der am besten für Sie funktioniert",
-    "standard": {
-      "name": "Standard",
-      "description": "Perfekt für den Einstieg",
-      "features": [
-        "Bis zu 10 Projekte",
-        "Grundlegende Analysen",
-        "E-Mail-Support",
-        "Standard-Funktionen"
-      ]
+    "darkMode": {
+      "title": "Dunkler Modus",
+      "description": "Schöne dunkle und helle Themes mit sanften Übergängen und Theme-Persistenz."
     },
-    "pro": {
-      "name": "Pro",
-      "description": "Für wachsende Unternehmen",
-      "features": [
-        "Unbegrenzte Projekte",
-        "Erweiterte Analysen",
-        "Prioritäts-Support",
-        "Alle Funktionen"
-      ],
-      "popular": "Am beliebtesten"
+    "responsive": {
+      "title": "Responsives Design",
+      "description": "Vollständig responsives Layout, das auf allen Geräten und Bildschirmgrößen perfekt funktioniert."
+    },
+    "ready": {
+      "title": "Produktionsbereit",
+      "description": "Fehlerbehandlung, Ladezustände und SEO-Optimierung eingebaut."
     }
   },
   "cta": {
-    "title": "Bereit anzufangen zu bauen?",
-    "subtitle": "Schließen Sie sich Tausenden von Entwicklern an, die mit ShipNow schneller geliefert haben.",
-    "button": "Heute anfangen"
-  },
-  "subscription": {
-    "upgrade": "Upgrade",
-    "manage": "Abonnement verwalten",
-    "usageLimit": "Nutzungsgrenze erreicht",
-    "usageLimitMessage": "Sie haben Ihre Nutzungsgrenze erreicht. Upgraden Sie, um diese Funktion weiter zu nutzen.",
-    "currentPlan": "Aktueller Plan",
-    "renewsOn": "Verlängert am",
-    "canceledOn": "Gekündigt am"
+    "title": "Bereit, Ihre Website zu erstellen?",
+    "subtitle": "Beginnen Sie noch heute mit diesem sauberen, modernen Template.",
+    "button": "Jetzt mit dem Erstellen beginnen"
   },
   "errors": {
-    "userNotAuthenticated": "Bitte melden Sie sich an, um fortzufahren.",
-    "invalidCredentials": "Ungültige E-Mail oder Passwort.",
-    "sessionExpired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
-    "subscriptionRequired": "Diese Funktion erfordert ein Abonnement.",
-    "usageLimitExceeded": "Sie haben Ihre Nutzungsgrenze erreicht. Bitte upgraden Sie Ihren Plan.",
-    "insufficientPermissions": "Sie haben keine Berechtigung, diese Aktion durchzuführen.",
     "resourceNotFound": "Die angeforderte Ressource wurde nicht gefunden.",
     "resourceAlreadyExists": "Diese Ressource existiert bereits.",
     "invalidInput": "Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut.",
-    "missingRequiredField": "Bitte füllen Sie alle Pflichtfelder aus.",
+    "missingRequiredField": "Bitte füllen Sie alle erforderlichen Felder aus.",
     "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung.",
-    "serverError": "Etwas ist schiefgegangen. Bitte versuchen Sie es später erneut.",
+    "serverError": "Etwas ist schief gelaufen. Bitte versuchen Sie es später erneut.",
     "databaseError": "Datenbankfehler. Bitte versuchen Sie es später erneut.",
-    "externalServiceError": "Externer Servicefehler. Bitte versuchen Sie es später erneut."
+    "externalServiceError": "Externer Service-Fehler. Bitte versuchen Sie es später erneut."
   }
 }
