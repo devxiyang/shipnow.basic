@@ -6,132 +6,74 @@
     "cancel": "Cancelar",
     "save": "Guardar",
     "continue": "Continuar",
-    "back": "Atrás",
+    "back": "Volver",
     "next": "Siguiente",
     "close": "Cerrar"
   },
-  "auth": {
-    "signIn": "Iniciar Sesión",
-    "signOut": "Cerrar Sesión",
-    "logIn": "Iniciar Sesión",
-    "logOut": "Cerrar Sesión",
-    "signInTitle": "Inicia sesión para continuar",
-    "signInSubtitle": "Usa tu cuenta de Google",
-    "continueWithGoogle": "Continuar con Google",
-    "signingIn": "Iniciando sesión...",
-    "loginSuccessful": "Inicio de sesión exitoso",
-    "loginFailed": "Error al iniciar sesión, inténtalo de nuevo",
-    "profile": "Perfil",
-    "termsPrivacy": "Al continuar, aceptas nuestros Términos y Política de Privacidad"
-  },
   "navigation": {
     "features": "Características",
-    "pricing": "Precios",
     "about": "Acerca de",
     "help": "Ayuda",
     "contact": "Contacto",
-    "status": "Estado",
     "terms": "Términos",
-    "privacy": "Privacidad",
-    "cookies": "Cookies"
+    "privacy": "Privacidad"
   },
   "footer": {
-    "resources": "Recursos",
-    "documentation": "Documentación",
-    "apiReference": "Referencia API",
-    "examples": "Ejemplos",
-    "blog": "Blog",
-    "company": "Empresa",
-    "careers": "Carreras",
-    "partners": "Socios",
+    "product": "Producto",
     "legal": "Legal",
     "privacyPolicy": "Política de Privacidad",
     "termsOfService": "Términos de Servicio",
-    "cookiePolicy": "Política de Cookies",
-    "security": "Seguridad",
     "copyright": "Todos los derechos reservados."
   },
   "hero": {
-    "badge": "🚀 Lanza más rápido con ShipNow",
-    "headline": "Construye tu SaaS",
-    "highlightedText": " en días",
-    "subtitle": "La plantilla completa de Next.js con todo lo que necesitas para lanzar tu SaaS. Autenticación, pagos y suscripciones incluidas.",
-    "primaryCTA": "Comenzar",
+    "badge": "🚀 Simple y Limpio",
+    "headline": "Construye tu sitio web",
+    "highlightedText": " rápidamente",
+    "subtitle": "Una plantilla limpia de Next.js con soporte de internacionalización. Perfecta para sitios web independientes simples y páginas de destino.",
+    "primaryCTA": "Empezar",
     "secondaryCTA": "Ver Características"
   },
   "features": {
-    "title": "Todo lo que necesitas para lanzar rápido",
-    "subtitle": "Deja de construir autenticación y pagos desde cero. Enfócate en tu producto.",
-    "auth": {
-      "title": "Autenticación",
-      "description": "Sistema completo de autenticación con Google OAuth, gestión de usuarios y seguridad."
+    "title": "Todo lo que necesitas para un sitio web moderno",
+    "subtitle": "Limpio, responsivo y listo para personalizar según tus necesidades.",
+    "i18n": {
+      "title": "Internacionalización",
+      "description": "Soporte incorporado para múltiples idiomas con enrutamiento automático y localización."
     },
-    "payments": {
-      "title": "Pagos",
-      "description": "Integración con Stripe con suscripciones, pagos únicos y portal de cliente."
+    "stack": {
+      "title": "Stack Moderno",
+      "description": "Next.js 15, React 19, TypeScript, Tailwind CSS v4 para la mejor experiencia de desarrollo."
     },
-    "ui": {
-      "title": "UI Moderna",
-      "description": "Componentes hermosos construidos con shadcn/ui y Tailwind CSS."
+    "components": {
+      "title": "Componentes del Servidor",
+      "description": "Rendimiento optimizado con React Server Components y Next.js App Router."
     },
-    "performance": {
-      "title": "Rendimiento",
-      "description": "Construido en Next.js 15 con optimizaciones y mejores prácticas."
-    }
-  },
-  "pricing": {
-    "title": "Precios simples y transparentes",
-    "subtitle": "Elige el plan que mejor funcione para ti",
-    "standard": {
-      "name": "Estándar",
-      "description": "Perfecto para empezar",
-      "features": [
-        "Hasta 10 proyectos",
-        "Análisis básicos",
-        "Soporte por email",
-        "Características estándar"
-      ]
+    "darkMode": {
+      "title": "Modo Oscuro",
+      "description": "Hermosos temas oscuros y claros con transiciones suaves y persistencia de tema."
     },
-    "pro": {
-      "name": "Pro",
-      "description": "Para empresas en crecimiento",
-      "features": [
-        "Proyectos ilimitados",
-        "Análisis avanzados",
-        "Soporte prioritario",
-        "Todas las características"
-      ],
-      "popular": "Más Popular"
+    "responsive": {
+      "title": "Diseño Responsivo",
+      "description": "Diseño completamente responsivo que funciona perfectamente en todos los dispositivos y tamaños de pantalla."
+    },
+    "ready": {
+      "title": "Listo para Producción",
+      "description": "Manejo de errores, estados de carga y optimización SEO incorporados."
     }
   },
   "cta": {
-    "title": "¿Listo para empezar a construir?",
-    "subtitle": "Únete a miles de desarrolladores que han lanzado más rápido con ShipNow.",
-    "button": "Comenzar Hoy"
-  },
-  "subscription": {
-    "upgrade": "Actualizar",
-    "manage": "Gestionar Suscripción",
-    "usageLimit": "Límite de Uso Alcanzado",
-    "usageLimitMessage": "Has alcanzado tu límite de uso. Actualiza para continuar usando esta característica.",
-    "currentPlan": "Plan Actual",
-    "renewsOn": "Se renueva el",
-    "canceledOn": "Cancelado el"
+    "title": "¿Listo para construir tu sitio web?",
+    "subtitle": "Comienza con esta plantilla limpia y moderna hoy.",
+    "button": "Empezar a Construir Ahora"
   },
   "errors": {
-    "userNotAuthenticated": "Por favor, inicia sesión para continuar.",
-    "invalidCredentials": "Email o contraseña inválidos.",
-    "sessionExpired": "Tu sesión ha expirado. Por favor, inicia sesión de nuevo.",
-    "subscriptionRequired": "Esta característica requiere una suscripción.",
-    "usageLimitExceeded": "Has alcanzado tu límite de uso. Por favor, actualiza tu plan.",
-    "insufficientPermissions": "No tienes permisos para realizar esta acción.",
     "resourceNotFound": "El recurso solicitado no fue encontrado.",
     "resourceAlreadyExists": "Este recurso ya existe.",
-    "invalidInput": "Por favor, verifica tu entrada e inténtalo de nuevo.",
-    "missingRequiredField": "Por favor, completa todos los campos requeridos.",
-    "networkError": "Error de red. Por favor, verifica tu conexión.",
-    "serverError": "Algo salió mal. Por favor, inténtalo más tarde.",
-    "databaseError": "Error de base de datos. Por favor, inténtalo más tarde.",
-    "externalServiceError": "Error de servicio externo. Por favor, inténtalo más tarde."
+    "invalidInput": "Por favor verifica tu entrada e intenta de nuevo.",
+    "missingRequiredField": "Por favor completa todos los campos requeridos.",
+    "networkError": "Error de red. Por favor verifica tu conexión.",
+    "serverError": "Algo salió mal. Por favor intenta de nuevo más tarde.",
+    "databaseError": "Error de base de datos. Por favor intenta de nuevo más tarde.",
+    "externalServiceError": "Error de servicio externo. Por favor intenta de nuevo más tarde."
   }
 }

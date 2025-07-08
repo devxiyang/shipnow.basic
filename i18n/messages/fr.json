@@ -4,127 +4,69 @@
     "error": "Erreur",
     "success": "Succès",
     "cancel": "Annuler",
-    "save": "Enregistrer",
+    "save": "Sauvegarder",
     "continue": "Continuer",
     "back": "Retour",
     "next": "Suivant",
     "close": "Fermer"
   },
-  "auth": {
-    "signIn": "Se connecter",
-    "signOut": "Se déconnecter",
-    "logIn": "Connexion",
-    "logOut": "Déconnexion",
-    "signInTitle": "Connectez-vous pour continuer",
-    "signInSubtitle": "Utilisez votre compte Google",
-    "continueWithGoogle": "Continuer avec Google",
-    "signingIn": "Connexion en cours...",
-    "loginSuccessful": "Connexion réussie",
-    "loginFailed": "Échec de la connexion, veuillez réessayer",
-    "profile": "Profil",
-    "termsPrivacy": "En continuant, vous acceptez nos Conditions et notre Politique de confidentialité"
-  },
   "navigation": {
     "features": "Fonctionnalités",
-    "pricing": "Tarifs",
     "about": "À propos",
     "help": "Aide",
     "contact": "Contact",
-    "status": "Statut",
     "terms": "Conditions",
-    "privacy": "Confidentialité",
-    "cookies": "Cookies"
+    "privacy": "Confidentialité"
   },
   "footer": {
-    "resources": "Ressources",
-    "documentation": "Documentation",
-    "apiReference": "Référence API",
-    "examples": "Exemples",
-    "blog": "Blog",
-    "company": "Entreprise",
-    "careers": "Carrières",
-    "partners": "Partenaires",
+    "product": "Produit",
     "legal": "Légal",
-    "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions de service",
-    "cookiePolicy": "Politique des cookies",
-    "security": "Sécurité",
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
     "copyright": "Tous droits réservés."
   },
   "hero": {
-    "badge": "🚀 Lancez plus vite avec ShipNow",
-    "headline": "Construisez votre SaaS",
-    "highlightedText": " en quelques jours",
-    "subtitle": "Le modèle Next.js complet avec tout ce dont vous avez besoin pour lancer votre SaaS. Authentification, paiements et abonnements inclus.",
+    "badge": "🚀 Simple et Propre",
+    "headline": "Construisez votre site web",
+    "highlightedText": " rapidement",
+    "subtitle": "Un template Next.js propre avec support d'internationalisation. Parfait pour les sites web indépendants simples et les pages de destination.",
     "primaryCTA": "Commencer",
-    "secondaryCTA": "Voir les fonctionnalités"
+    "secondaryCTA": "Voir les Fonctionnalités"
   },
   "features": {
-    "title": "Tout ce dont vous avez besoin pour livrer rapidement",
-    "subtitle": "Arrêtez de construire l'authentification et les paiements à partir de zéro. Concentrez-vous sur votre produit.",
-    "auth": {
-      "title": "Authentification",
-      "description": "Système d'authentification complet avec Google OAuth, gestion des utilisateurs et sécurité."
+    "title": "Tout ce dont vous avez besoin pour un site web moderne",
+    "subtitle": "Propre, responsif et prêt à personnaliser selon vos besoins.",
+    "i18n": {
+      "title": "Internationalisation",
+      "description": "Support intégré pour plusieurs langues avec routage automatique et localisation."
     },
-    "payments": {
-      "title": "Paiements",
-      "description": "Intégration Stripe avec abonnements, paiements uniques et portail client."
+    "stack": {
+      "title": "Stack Moderne",
+      "description": "Next.js 15, React 19, TypeScript, Tailwind CSS v4 pour la meilleure expérience de développement."
     },
-    "ui": {
-      "title": "Interface moderne",
-      "description": "Beaux composants construits avec shadcn/ui et Tailwind CSS."
+    "components": {
+      "title": "Composants Serveur",
+      "description": "Performance optimisée avec React Server Components et Next.js App Router."
     },
-    "performance": {
-      "title": "Performance",
-      "description": "Construit sur Next.js 15 avec optimisations et meilleures pratiques."
-    }
-  },
-  "pricing": {
-    "title": "Tarification simple et transparente",
-    "subtitle": "Choisissez le plan qui vous convient le mieux",
-    "standard": {
-      "name": "Standard",
-      "description": "Parfait pour commencer",
-      "features": [
-        "Jusqu'à 10 projets",
-        "Analyses de base",
-        "Support par email",
-        "Fonctionnalités standard"
-      ]
+    "darkMode": {
+      "title": "Mode Sombre",
+      "description": "Beaux thèmes sombres et clairs avec transitions fluides et persistance de thème."
     },
-    "pro": {
-      "name": "Pro",
-      "description": "Pour les entreprises en croissance",
-      "features": [
-        "Projets illimités",
-        "Analyses avancées",
-        "Support prioritaire",
-        "Toutes les fonctionnalités"
-      ],
-      "popular": "Le plus populaire"
+    "responsive": {
+      "title": "Design Responsif",
+      "description": "Mise en page entièrement responsive qui fonctionne parfaitement sur tous les appareils et tailles d'écran."
+    },
+    "ready": {
+      "title": "Prêt pour la Production",
+      "description": "Gestion d'erreurs, états de chargement et optimisation SEO intégrés."
     }
   },
   "cta": {
-    "title": "Prêt à commencer à construire ?",
-    "subtitle": "Rejoignez des milliers de développeurs qui ont livré plus vite avec ShipNow.",
-    "button": "Commencer aujourd'hui"
-  },
-  "subscription": {
-    "upgrade": "Mettre à niveau",
-    "manage": "Gérer l'abonnement",
-    "usageLimit": "Limite d'utilisation atteinte",
-    "usageLimitMessage": "Vous avez atteint votre limite d'utilisation. Mettez à niveau pour continuer à utiliser cette fonctionnalité.",
-    "currentPlan": "Plan actuel",
-    "renewsOn": "Renouvelle le",
-    "canceledOn": "Annulé le"
+    "title": "Prêt à construire votre site web ?",
+    "subtitle": "Commencez avec ce template propre et moderne aujourd'hui.",
+    "button": "Commencer à Construire Maintenant"
   },
   "errors": {
-    "userNotAuthenticated": "Veuillez vous connecter pour continuer.",
-    "invalidCredentials": "Email ou mot de passe invalide.",
-    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
-    "subscriptionRequired": "Cette fonctionnalité nécessite un abonnement.",
-    "usageLimitExceeded": "Vous avez atteint votre limite d'utilisation. Veuillez mettre à niveau votre plan.",
-    "insufficientPermissions": "Vous n'avez pas les permissions pour effectuer cette action.",
     "resourceNotFound": "La ressource demandée n'a pas été trouvée.",
     "resourceAlreadyExists": "Cette ressource existe déjà.",
     "invalidInput": "Veuillez vérifier votre saisie et réessayer.",

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { siteConfig } from '@/config/site.config';
-import { Mail, Twitter, Github } from 'lucide-react';
+import { Twitter, Github } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export function Footer() {
@@ -121,13 +121,6 @@ export function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-6">
             {/* Contact Info */}
             <div className="flex flex-col sm:flex-row gap-4 text-sm">
-              <a 
-                href={`mailto:${siteConfig.email}`}
-                className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors w-fit group"
-              >
-                <Mail className="h-4 w-4 group-hover:scale-110 transition-transform" />
-                {siteConfig.email}
-              </a>
               <a 
                 href={`https://twitter.com/${siteConfig.twitter.replace('@', '')}`}
                 target="_blank"

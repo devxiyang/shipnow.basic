@@ -119,10 +119,7 @@ export default function PrivacyPolicy() {
 
               <h2>Contact Us</h2>
               <p>
-                If you have any questions about this Privacy Policy, please contact us at {' '}
-                <a href={`mailto:${siteConfig.email}`} className="text-primary hover:underline">
-                  {siteConfig.email}
-                </a>
+                If you have any questions about this Privacy Policy, please contact us through our website.
               </p>
             </CardContent>
           </Card>

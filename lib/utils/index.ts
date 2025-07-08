@@ -44,7 +44,6 @@ export {
   ERROR_CODES,
   handleActionError,
   handleNetworkError,
-  handlePermissionError,
   handleError,
   createErrorBoundaryHandler,
   withErrorHandling,

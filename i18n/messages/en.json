@@ -10,121 +10,63 @@
     "next": "Next",
     "close": "Close"
   },
-  "auth": {
-    "signIn": "Sign In",
-    "signOut": "Sign Out",
-    "logIn": "Log In",
-    "logOut": "Log Out",
-    "signInTitle": "Sign in to continue",
-    "signInSubtitle": "Use your Google account",
-    "continueWithGoogle": "Continue with Google",
-    "signingIn": "Signing in...",
-    "loginSuccessful": "Login successful",
-    "loginFailed": "Login failed, please try again",
-    "profile": "Profile",
-    "termsPrivacy": "By continuing, you agree to our Terms & Privacy Policy"
-  },
   "navigation": {
     "features": "Features",
-    "pricing": "Pricing", 
     "about": "About",
     "help": "Help",
     "contact": "Contact",
-    "status": "Status",
     "terms": "Terms",
-    "privacy": "Privacy",
-    "cookies": "Cookies"
+    "privacy": "Privacy"
   },
   "footer": {
-    "resources": "Resources",
-    "documentation": "Documentation",
-    "apiReference": "API Reference",
-    "examples": "Examples",
-    "blog": "Blog",
-    "company": "Company",
-    "careers": "Careers",
-    "partners": "Partners",
+    "product": "Product",
     "legal": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "cookiePolicy": "Cookie Policy",
-    "security": "Security",
     "copyright": "All rights reserved."
   },
   "hero": {
-    "badge": "🚀 Launch faster with ShipNow",
-    "headline": "Build your SaaS",
-    "highlightedText": " in days",
-    "subtitle": "The complete Next.js template with everything you need to launch your SaaS. Authentication, payments, and subscriptions included.",
+    "badge": "🚀 Simple & Clean",
+    "headline": "Build your website",
+    "highlightedText": " quickly",
+    "subtitle": "A clean Next.js template with internationalization support. Perfect for simple independent websites and landing pages.",
     "primaryCTA": "Get Started",
     "secondaryCTA": "View Features"
   },
   "features": {
-    "title": "Everything you need to ship fast",
-    "subtitle": "Stop building auth and payments from scratch. Focus on your product.",
-    "auth": {
-      "title": "Authentication",
-      "description": "Complete auth system with Google OAuth, user management, and security."
+    "title": "Everything you need for a modern website",
+    "subtitle": "Clean, responsive, and ready to customize for your needs.",
+    "i18n": {
+      "title": "Internationalization",
+      "description": "Built-in support for multiple languages with automatic routing and localization."
     },
-    "payments": {
-      "title": "Payments", 
-      "description": "Stripe integration with subscriptions, one-time payments, and customer portal."
+    "stack": {
+      "title": "Modern Stack",
+      "description": "Next.js 15, React 19, TypeScript, Tailwind CSS v4 for the best developer experience."
     },
-    "ui": {
-      "title": "Modern UI",
-      "description": "Beautiful components built with shadcn/ui and Tailwind CSS."
+    "components": {
+      "title": "Server Components",
+      "description": "Optimized performance with React Server Components and Next.js App Router."
     },
-    "performance": {
-      "title": "Performance",
-      "description": "Built on Next.js 15 with optimizations and best practices."
-    }
-  },
-  "pricing": {
-    "title": "Simple, transparent pricing",
-    "subtitle": "Choose the plan that works best for you",
-    "standard": {
-      "name": "Standard",
-      "description": "Perfect for getting started",
-      "features": [
-        "Up to 10 projects",
-        "Basic analytics", 
-        "Email support",
-        "Standard features"
-      ]
+    "darkMode": {
+      "title": "Dark Mode",
+      "description": "Beautiful dark and light themes with smooth transitions and theme persistence."
     },
-    "pro": {
-      "name": "Pro",
-      "description": "For growing businesses",
-      "features": [
-        "Unlimited projects",
-        "Advanced analytics",
-        "Priority support", 
-        "All features"
-      ],
-      "popular": "Most Popular"
+    "responsive": {
+      "title": "Responsive Design",
+      "description": "Fully responsive layout that works perfectly on all devices and screen sizes."
+    },
+    "ready": {
+      "title": "Production Ready",
+      "description": "Error handling, loading states, and SEO optimization built right in."
     }
   },
   "cta": {
-    "title": "Ready to start building?",
-    "subtitle": "Join thousands of developers who have shipped faster with ShipNow.",
-    "button": "Get Started Today"
-  },
-  "subscription": {
-    "upgrade": "Upgrade",
-    "manage": "Manage Subscription",
-    "usageLimit": "Usage Limit Reached",
-    "usageLimitMessage": "You've reached your usage limit. Upgrade to continue using this feature.",
-    "currentPlan": "Current Plan",
-    "renewsOn": "Renews on",
-    "canceledOn": "Canceled on"
+    "title": "Ready to build your website?",
+    "subtitle": "Get started with this clean, modern template today.",
+    "button": "Start Building Now"
   },
   "errors": {
-    "userNotAuthenticated": "Please sign in to continue.",
-    "invalidCredentials": "Invalid email or password.",
-    "sessionExpired": "Your session has expired. Please sign in again.",
-    "subscriptionRequired": "This feature requires a subscription.",
-    "usageLimitExceeded": "You've reached your usage limit. Please upgrade your plan.",
-    "insufficientPermissions": "You don't have permission to perform this action.",
     "resourceNotFound": "The requested resource was not found.",
     "resourceAlreadyExists": "This resource already exists.",
     "invalidInput": "Please check your input and try again.",

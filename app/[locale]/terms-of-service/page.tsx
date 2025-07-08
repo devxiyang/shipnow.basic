@@ -106,10 +106,7 @@ export default function TermsOfService() {
 
               <h2>Contact Information</h2>
               <p>
-                If you have any questions about these Terms of Service, please contact us at {' '}
-                <a href={`mailto:${siteConfig.email}`} className="text-primary hover:underline">
-                  {siteConfig.email}
-                </a>
+                If you have any questions about these Terms of Service, please contact us through our website.
               </p>
             </CardContent>
           </Card>
